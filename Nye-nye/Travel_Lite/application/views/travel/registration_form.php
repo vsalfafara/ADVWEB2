@@ -41,7 +41,7 @@ overflow: hidden;
 </style>
 
 <div id="logo">
-    <a href="http://localhost/Travel_Lite/index.php"><img src="http://localhost/Travel_Lite/assests/images/lite.png"  height="500" width="550"  /></a>
+    <a href=""><img src="http://localhost/Travel_Lite/assests/images/lite.png"  height="500" width="550"  />
 
 </div>
 <div id="main">

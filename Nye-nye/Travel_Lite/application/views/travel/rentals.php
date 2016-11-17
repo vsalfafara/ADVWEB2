@@ -67,7 +67,7 @@
 			<label>BUS</label><br>
 				<img src="<?php echo base_url(); ?>assests/images/bus.png" style="height:200px; width:400px;"/><br/>
 
-					<form action="<?php echo base_url('index.php/privateBus/view');?>">
+					<form action="<?php echo base_url('index.php/rental_transaction/privateBus');?>">
 					<button class="btn private btn-1b"> Private </button>
 					</form>
 
@@ -81,7 +81,7 @@
 				<img src="<?php echo base_url(); ?>assests/images/van.png" style="height:200px; width:350px;"/><br/>
 
 					<form action="<?php echo base_url('index.php/privateVan/view');?>">
-					<button class="btn private btn-1b"> Private </button>
+						<button class="btn private btn-1b"> Private </button>
 					</form>
 			</div>
 

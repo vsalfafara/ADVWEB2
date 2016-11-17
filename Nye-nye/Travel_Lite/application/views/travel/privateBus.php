@@ -61,7 +61,7 @@ $this->load->helper('url');
         </div>
     </div>
 </div>
-<form role="form">
+<form role="form" action="<?php echo base_url('index.php/rental_transaction/privateBus_invoice')?>">
     <!--Step 1-->
     <div class="row setup-content" id="step-1">
         <div class="col-xs-12">
@@ -71,30 +71,44 @@ $this->load->helper('url');
                     <label class="control-label">From: </label>
            <select name="departing"  maxlength="50" required="required" class="form-control">
             <option value="default" disabled selected>Departing From</option>
-            <option value="manila">Manila</option>
-            <option value="lucena">Lucena</option>
-            <option value="ilocos">Ilocos</option>
-            <option value="pampanga">Pampanga</option>
+
+            <?php
+              foreach($dept_result as $departure)
+              {
+            ?>
+              <option value="<?php echo '$departure->dep_name'; ?>"><?php echo "$departure->dep_name"; ?></option>
+            <?php
+              }
+            ?>
           </select>
                 </div>
                 <div class="form-group">
                     <label class="control-label">To: </label>
           <select name="arriving"  maxlength="50" required="required" class="form-control">
             <option value="default" disabled selected>Arriving At</option>
-            <option value="manila">Manila</option>
-            <option value="lucena">Lucena</option>
-            <option value="ilocos">Ilocos</option>
-            <option value="pampanga">Pampanga</option>
+
+            <?php
+              foreach($arr_result as $arrival)
+              {
+            ?>
+              <option value="<?php echo '$arrival->arr_name'; ?>"><?php echo "$arrival->arr_name"; ?></option>
+            <?php
+              }
+            ?>
           </select>
                 </div>
         <div class="form-group">
                     <label class="control-label">Time: </label>
           <select name="time"  maxlength="50" required="required" class="form-control">
             <option value="default" disabled selected >Time</option>
-            <option value="8AM" >8:00AM</option>
-            <option value="1030AM" >10:30AM</option>
-            <option value="1PM">1:00PM</option>
-            <option value="3PM">3:00PM</option>
+            <?php
+              foreach($dept_result as $time)
+              {
+            ?>
+              <option value="<?php echo '$time->time'; ?>"><?php echo "$time->time"; ?></option>
+            <?php
+              }
+            ?>
           </select>
                 </div>
                 <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
@@ -188,13 +202,15 @@ $this->load->helper('url');
           </div>            
           </div>
         </div>
-              <button class="btn btn-primary nextBtn btn-lg pull-right" type="button">Next
-              </button>
+              <input type='submit' value="Next" name='submit' class="btn btn-primary nextBtn btn-lg pull-right">
+              </input>
             </div>
         </div>
     </div>
+    <?php form_open('index.php/rental_transaction/privateBus_invoices');?>
+</form>
     <!--End of Step 3-->
-    <!--Step 4-->
+    
   <div class="row setup-content" id="step-4">
         <div class="col-xs-12">
             <div class="col-md-12">
@@ -308,5 +324,4 @@ $this->load->helper('url');
         </div>
     </div>
     <!--End of Step 5-->
-</form>
 </div>

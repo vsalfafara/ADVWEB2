@@ -69,23 +69,23 @@
 									<br>
 
 						<div class="row">	
-						    <div class="col-md-4">
-						          <img src="<?php echo base_url(); ?>assests/profiles/Ken.jpg" class="img-circle" alt="Cinque Terre" width="100" height="100">
-						        <div class="col-md-12">
-						        <p>Ken Ferrer </p>
-						        </div>		
-						       	
-						       
-						    </div>
-						    
-						      <div class="col-md-4">
+						    	<div class="col-md-4">
 						          <img src="<?php echo base_url(); ?>assests/profiles/allen.png" class="img-circle" alt="Cinque Terre" width="100" height="100">
 						           <div class="col-md-8">
 						        <p>Allen Baldovino </p>
 						        </div>	
+						       	
+						       
+						    </div>
+						    
+						  <div class="col-md-4">
+						          <img src="<?php echo base_url(); ?>assests/profiles/Ken.jpg" class="img-circle" alt="Cinque Terre" width="100" height="100">
+						        <div class="col-md-12">
+						        <p>Ken Ferrer </p>
+						    </div>	
 						      </div>
                                <div class="col-md-4">
-						          <img src="<?php echo base_url(); ?>assests/profiles/allen.jpg" class="img-circle" alt="Cinque Terre" width="100" height="100">
+						          <img src="<?php echo base_url(); ?>assests/profiles/rap.jpg" class="img-circle" alt="Cinque Terre" width="100" height="100">
 						           <div class="col-md-8">
 						        <p>Rafael Ochotorena </p>
 						        </div>	

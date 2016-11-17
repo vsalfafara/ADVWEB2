@@ -84,7 +84,7 @@ class user_authentication extends CI_Controller
 
                     $this->session->set_userdata('logged_in', $session_data);
                     $this->load->view('templates/header');
-                    $this->load->view('travel/rentals');
+                    $this->load->view('travel/index');
                     $this->load->view('templates/footer');
                 }
 
