@@ -48,7 +48,7 @@ overflow: hidden;
    
    </style>
 <div id="logo">
-<img src="http://localhost/Travel_Lite/assests/images/lite.png"  alt="" height="500" width="500"  />
+    <a href="http://localhost/Travel_Lite/index.php"><img src="http://localhost/Travel_Lite/assests/images/lite.png"  height="500" width="550"  /></a>
 </div>
 
 <div id="main">
@@ -73,11 +73,7 @@ overflow: hidden;
         <input type="password" name="password" id="password" placeholder="**********"/><br/><br />
         <input type="submit" value=" Login " name="submit"/><br />
 
-        <h5>Don't have an account? <a href="<?php echo base_url('travel-lite/index.php/user_authentication/new_user_registration');?>">Sign up</a></h5>
-        <?php echo form_close(); ?>
-        <a href="http://localhost/Travel_Lite/index.php" class="btn btn-info btn-lg">
-          <span class="glyphicon glyphicon-home"></span> Home
-        </a>
+        <h5>Don't have an account? <a href="http://localhost/Travel_Lite/index.php/user_authentication/new_user_registration">Sign up</a></h5>
     </div>
 </div>
 </body>
