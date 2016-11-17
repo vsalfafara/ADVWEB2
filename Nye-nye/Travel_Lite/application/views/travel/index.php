@@ -1,6 +1,7 @@
 <?php
  $this->load->helper('url');
 ?>
+
 <!-- header -->
 <div class="banner">
 	<div class="callbacks_container">
@@ -28,7 +29,19 @@
 				<li><a href="<?php $this->load->helper('url'); echo base_url('index.php/rentals/view');?>" data-hover="RENTALS">RENTALS</a></li>
 				<li><a href="<?php $this->load->helper('url');echo base_url('index.php/destination/view');?>" data-hover="DESTINATIONS">DESTINATIONS</a></li>
 				<li><a href="<?php $this->load->helper('url'); echo base_url('index.php/contact/view');?>" data-hover="CONTACTS">CONTACTS</a></li>
-				<div class="clearfix"> </div>
+
+			    <br>
+				<?php
+				if (isset($this->session->userdata['logged_in']))
+								{
+
+								?>
+
+								<li><a href="<?php $this->load->helper('url'); echo base_url('index.php/user_authentication/logout');?>" data-hover="LOGOUT">LOGOUT</center></a></li>
+
+								<?php
+								}
+								?>
 			</ul>
 		</div>
 		<div class="clearfix"> </div>
@@ -66,6 +79,7 @@
 		<h3><center>Welcome</center></h3>
 				<h6>Travel Lite aims to provide an organized and systematic vacation planning to remove the hassle in booking and be worry free on their trips with affordable services.</h6>
 				<p>Our company offers a “one stop shop” for people who don’t have enough time in planning their vacation travels, for those who doesn’t have an idea on where to spend their free days and for those who wants to experience extremes and hardcore adventures. Just tell us what you want, you're in safe hands.</p>
+<
 		<div class="row">		
 		  <div class="col-md-6">
  		<a class="btn btn-large btn-info" href=" http://localhost/Travel_Lite/index.php/user_authentication/new_user_registration">Sign up</a>

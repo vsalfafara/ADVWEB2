@@ -1,6 +1,14 @@
 <?php
 $this->load->helper('url');
 ?>
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
 <!-- header -->
 <div class="banner-1">
 <div class="container">
@@ -10,13 +18,14 @@ $this->load->helper('url');
 				</div>
 				<div class="head-nav">
 						<span class="menu"> </span>
-							<ul class="cl-effect-16">
+							<ul class="cl-effect-12">
 								<li><a href="<?php echo base_url('index.php');?>" data-hover="HOME">HOME</a></li>
 								<li><a href="<?php echo base_url('index.php/about/view');?>" data-hover="ABOUT">ABOUT</a></li>
 								<li><a href="<?php echo base_url('index.php/rentals/view');?>" data-hover="RENTALS">RENTALS</a></li>
 								<li><a href="<?php echo base_url('index.php/destination/view');?>" data-hover="DESTINATIONS">DESTINATIONS</a></li>
 								<li class="active"><a href="<?php echo base_url('index.php/contact/view');?>" data-hover="CONTACTS">CONTACTS</a></li>
-								
+                                <br>
+
 								<?php
 
 								if (isset($this->session->userdata['logged_in']))
@@ -29,6 +38,7 @@ $this->load->helper('url');
 								<?php
 								}
 								?>
+								</ul>
 				</div>
 						<div class="clearfix"> </div>
 					<!-- script-for-nav -->
