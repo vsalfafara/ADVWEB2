@@ -1,5 +1,5 @@
 <?php
-$this->load->helper('url');
+    $this->load->helper('url');
 ?>
 
 <html>
@@ -51,7 +51,7 @@ overflow: hidden;
    
    </style>
 <div id="logo">
-    <a href="<?php $this->load->helper('url'); echo base_url('index.php');?>"><img src="http://localhost/Travel_Lite/assests/images/lite.png"  alt="" height="500" width="500"  />
+<img src="http://localhost/Travel_Lite/assests/images/lite.png"  alt="" height="500" width="500"  />
 </div>
 
 <div id="main">
@@ -76,8 +76,11 @@ overflow: hidden;
         <input type="password" name="password" id="password" placeholder="**********"/><br/><br />
         <input type="submit" value=" Login " name="submit"/><br />
 
-        <h5>Don't have an account? <a href="<?php echo base_url('travel-lite/index.php/user_authentication/new_user_registration');?>">Sign up</a></h5>
+        <h5>Don't have an account? <a href="<?php echo base_url('index.php/user_authentication/new_user_registration');?>">Sign up</a></h5>
         <?php echo form_close(); ?>
+        <a href="http://localhost/Travel_Lite/index.php" class="btn btn-info btn-lg">
+          <span class="glyphicon glyphicon-home"></span> Home
+        </a>
     </div>
 </div>
 </body>
