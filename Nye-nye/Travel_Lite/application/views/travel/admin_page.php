@@ -32,7 +32,7 @@ if (isset($this->session->userdata['logged_in'])) {
         <br>
         <div class="col-lg-6">  
             <div class="col-lg-12">           
-                    <h2>Membership</h2>
+                    <h2>ACCOUNT</h2>
                     <p><strong>Username: </strong> <?php echo $username; ?> </p>
                     <p><strong>Email : </strong> <?php echo $email; ?> </p>
                     <br>                     

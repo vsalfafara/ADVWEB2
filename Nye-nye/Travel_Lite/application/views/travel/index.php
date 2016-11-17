@@ -36,8 +36,7 @@
 								{
 
 								?>
-
-								<li><a href="<?php $this->load->helper('url'); echo base_url('index.php/user_authentication/logout');?>" data-hover="LOGOUT">LOGOUT</center></a></li>
+		  		<li><a href="<?php $this->load->helper('url'); echo base_url('index.php/user_authentication/logout');?>" data-hover="LOGOUT">LOGOUT</center></a></li>
 
 								<?php
 								}
@@ -79,7 +78,6 @@
 		<h3><center>Welcome</center></h3>
 				<h6>Travel Lite aims to provide an organized and systematic vacation planning to remove the hassle in booking and be worry free on their trips with affordable services.</h6>
 				<p>Our company offers a “one stop shop” for people who don’t have enough time in planning their vacation travels, for those who doesn’t have an idea on where to spend their free days and for those who wants to experience extremes and hardcore adventures. Just tell us what you want, you're in safe hands.</p>
-
 		<div class="row">		
 		  <div class="col-md-6">
  		<a class="btn btn-large btn-info" href=" http://localhost/Travel_Lite/index.php/user_authentication/new_user_registration">Sign up</a>
