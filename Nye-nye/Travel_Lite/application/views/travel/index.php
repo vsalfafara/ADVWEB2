@@ -97,8 +97,7 @@
 	</div>
 	</div>
 	
-	<div class="clearfix"> </div>
-        
+	<div class="clearfix"> </div>      
 
 </div>
 <!-- welcome -->
@@ -109,7 +108,7 @@
 		<div class="col-md-4 flights">
 			<i class="fligh"> </i>
 			<h4 class="hcol"> Destination</h4>
-			<p class="pcol">Where do you want to go?<br>
+			<p style="font-family: 'Nunito', sans-serif;" class="pcol">Where do you want to go?<br>
 
 
 			</p>
@@ -117,13 +116,13 @@
 		<div class="col-md-4 resturants">
 			<i class="rest"> </i>
 			<h4> Payment</h4>
-			<p>Online Payment (Credit Card)<br>
+			<p style="font-family: 'Nunito', sans-serif">Online Payment (Credit Card)<br>
 				Cash on Hand</p>
 		</div>
 		<div class="col-md-4 beech">
 			<i class="beec"> </i>
 			<h4>Bus</h4>
-			<p> Perhaps you require a shuttle bus or school bus to take people around? Travel Lite also offer bus rentals!</p>
+			<p style="font-family: 'Nunito', sans-serif"> Perhaps you require a shuttle bus or school bus to take people around? Travel Lite also offer bus rentals!</p>
 		</div>
 	
 		<div class="clearfix"> </div>
