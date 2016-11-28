@@ -28,5 +28,26 @@ Class Rental_Database extends CI_Model {
         }
 
 	}
+
+    public function receipt($data)
+    {
+        $this->db->insert('invoice', $data);
+
+        if ($this->db->affected_rows() > 0) 
+        {
+            $this->db->select('*');
+            $this->db->from('invoice');
+            $this->db->order_by("invoiceid", "desc");
+            $this->db->limit(1);
+            
+            $result = $this->db->get();
+
+            return $result->row();
+        }
+        else
+        {
+            return false;
+        }
+    }
 }
 ?>

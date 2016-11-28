@@ -22,19 +22,6 @@ $this->load->helper('url');
 								<li><a href="<?php echo base_url('index.php/destination/view');?>" data-hover="DESTINATIONS">DESTINATIONS</a></li>
 								<li><a href="<?php  echo base_url('index.php/contacts/view');?>" data-hover="CONTACTS">CONTACTS</a></li>
 									<div class="clearfix"> </div>
-
-								<?php
-								if (isset($this->session->userdata['logged_in']))
-									{
-								?>
-
-								<li><a href="<?php $this->load->helper('url'); echo base_url('index.php/profile/view');?>" data-hover="PROFILE">PROFILE</center></a></li>
-
-								<li><a href="<?php $this->load->helper('url'); echo base_url('index.php/user_authentication/logout');?>" data-hover="LOGOUT">LOGOUT</center></a></li>
-
-								<?php
-									}
-								?>
 							</ul>
 				</div>
 						<div class="clearfix"> </div>
@@ -61,28 +48,22 @@ $this->load->helper('url');
       <label>BUS</label><br>
         <img src="<?php echo base_url(); ?>assests/images/bus.png" style="height:200px; width:400px;"/><br/>
 
-		</div>
+      </div>
+       <form action="<?php echo base_url('index.php/privateBus/view');?>">
+          <button class="btn private btn-1b"> Private </button>
+          </form>
 
-		<form action="<?php echo base_url('index.php/privateBus/view');?>">
-			<button class="btn private btn-1b" style="display: none;"> Private </button>
-		</form>
-
-		<form action="<?php echo base_url('index.php/privateBus/view');?>">
-			 <input type="submit" class="btn private btn-1b" name="submit" value="PrivateBus"/>
-		</form>
-
-		<form action="<?php echo base_url('index.php/publicBus/view');?>">
-			 <input type="submit" class="btn private btn-1b" name="submit" value="PublicBus"/>
-		</form>
-
+          <form action="<?php echo base_url('index.php/publicBus/view');?>">
+          <button class="btn public btn-1b"> Public </button>
+          </form>
       <!--VAN-->
       <div>
       <label>VAN</label><br>
         <img src="<?php echo base_url(); ?>assests/images/van.png" style="height:200px; width:350px;"/><br/>
 
-		<form action="<?php echo base_url('index.php/privateVan/view');?>">
-			<button class="btn private btn-1b"> Private </button>
-		</form>
+          <form action="<?php echo base_url('index.php/privateVan/view');?>">
+          <button class="btn private btn-1b"> Private </button>
+          </form>
       </div>
 
     </div>

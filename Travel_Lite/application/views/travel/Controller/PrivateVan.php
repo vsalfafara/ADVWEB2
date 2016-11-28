@@ -1,9 +1,9 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Rentals extends CI_Controller {
+class PrivateVan extends CI_Controller {
 
-    public function view($page = 'rentals')
+    public function view($page = 'privateVan')
     {
         $this->load->helper('url');
         if ( !file_exists('application/views/travel/'.$page.'.php'))

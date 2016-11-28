@@ -40,38 +40,27 @@ $this->load->helper('url');
   <!--Booking-->
   <div>
     <h3> Reservation </h3>
-
-        <?php
-            $this->load->helper('form');
-            echo form_open('index.php/receipt/view_privateBus');
-        ?>
-
+      <form action="">
       <!--Departure-->
        <div class="form-group">
         <label class="control-label">From: </label>
            <select name="departing"  maxlength="50" required="required" class="form-control" required>
             <option value="default" disabled selected>Departing From</option>
-            <?php foreach($departure_data as $dep) { ?>
-
-              <option value="<?php echo $dep->dep_name; ?>">
-                <?php echo $dep->dep_name;?>
-              </option>
-
-            <?php } ?>
+            <option value="manila">Manila</option>
+            <option value="lucena">Lucena</option>
+            <option value="ilocos">Ilocos</option>
+            <option value="pampanga">Pampanga</option>
           </select>
         </div>
         <!--Arrival-->
         <div class="form-group">
           <label class="control-label">To: </label>
             <select name="arriving"  maxlength="50" required="required" class="form-control" required autofocus>
-            <option value="default" disabled selected>Arrival From</option>
-            <?php foreach($arrival_data as $arr) { ?>
-
-              <option value="<?php echo $arr->arr_name; ?>">
-                <?php echo $arr->arr_name;?>
-              </option>
-
-            <?php } ?>
+              <option value="default" disabled selected>Arriving At</option>
+              <option value="manila">Manila</option>
+              <option value="lucena">Lucena</option>
+              <option value="ilocos">Ilocos</option>
+              <option value="pampanga">Pampanga</option>
             </select>
         </div>
         <!--Time-->
@@ -79,13 +68,10 @@ $this->load->helper('url');
          <label class="control-label">Time: </label>
           <select name="time"  maxlength="50" required="required" class="form-control" required>
             <option value="default" disabled selected >Time</option>
-            <?php foreach($departure_data as $dep) { ?>
-
-              <option value="<?php echo $dep->time; ?>">
-                <?php echo $dep->time;?>
-              </option>
-
-            <?php } ?>
+            <option value="8AM" >8:00AM</option>
+            <option value="1030AM" >10:30AM</option>
+            <option value="1PM">1:00PM</option>
+            <option value="3PM">3:00PM</option>
           </select>
          </div>
          <!--Journey-->
@@ -99,11 +85,23 @@ $this->load->helper('url');
         </div>
          <!--Payment-->
         <div class="form-group">
-          <label class="control-label">Payment: </label>
-
-            <input type="submit" class="btn private btn-1b" name="submit" value="Cash"/><br />
-
-            <input type="submit" class="btn private btn-1b" name="submit" value="Credit Card"/>
+         <label class="control-label">Payment: </label>
+          <input type="checkbox" name="payment" value="Cash"> Cash </br>
+          <input type="checkbox" name="payment" value="Card"> Card </br>
         </div>
-             <!--Reservation-->
+        <!--Card-->
+        <div>
+            <fieldset>
+            <legend>Credit Card</legend>
+            Card Number: <input type="tel" class="form-control" name="cardNumber" placeholder="Valid Card Number" autocomplete="cc-number" required autofocus /><br>
+            Expiration:  <input type="tel" class="form-control" name="cardExpiry" placeholder="MM / YY"autocomplete="cc-exp" required/><br>
+            CV Code: <input type="tel" class="form-control" name="cardCVC" placeholder="CVC" autocomplete="cc-csc" required/></br>
+            Coupon Code: <input type="text" class="form-control" name="couponCode" />
+           </fieldset>
+        </div>
+              
+              <form action="<?php echo base_url('index.php/receipt/view');?>">
+                <input type="submit" class="btn btn-primary nextBtn btn-lg pull-right" value="Next"/>
+              </form>
+        </form> <!--Reservation-->
 </div>

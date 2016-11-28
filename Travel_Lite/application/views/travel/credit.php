@@ -52,42 +52,20 @@ $this->load->helper('url');
   </div>
 <!-- header -->
 
-<!-- vehicle -->
-<form role="form">
-<div class="container">
-  <div class="hover11 column">
-      <!--BUS-->
-      <div>
-      <label>BUS</label><br>
-        <img src="<?php echo base_url(); ?>assests/images/bus.png" style="height:200px; width:400px;"/><br/>
 
-		</div>
+<!-- credit -->
+	<div>
+	<fieldset>
+	<legend>Credit Card</legend>
+        Card Number: <input type="tel" class="form-control" name="cardNumber" placeholder="Valid Card Number" autocomplete="cc-number" required autofocus /><br>
+        Expiration:  <input type="tel" class="form-control" name="cardExpiry" placeholder="MM / YY"autocomplete="cc-exp" required/><br>
+        CV Code: <input type="tel" class="form-control" name="cardCVC" placeholder="CVC" autocomplete="cc-csc" required/></br>
+        Coupon Code: <input type="text" class="form-control" name="couponCode" />
+       </fieldset>
+	</div>
 
-		<form action="<?php echo base_url('index.php/privateBus/view');?>">
-			<button class="btn private btn-1b" style="display: none;"> Private </button>
-		</form>
+              <form action="<?php echo base_url('index.php/receipt/view');?>">
+                <input type="submit" class="btn btn-primary nextBtn btn-lg pull-right" value="Next"/>
+              </form>
 
-		<form action="<?php echo base_url('index.php/privateBus/view');?>">
-			 <input type="submit" class="btn private btn-1b" name="submit" value="PrivateBus"/>
-		</form>
-
-		<form action="<?php echo base_url('index.php/publicBus/view');?>">
-			 <input type="submit" class="btn private btn-1b" name="submit" value="PublicBus"/>
-		</form>
-
-      <!--VAN-->
-      <div>
-      <label>VAN</label><br>
-        <img src="<?php echo base_url(); ?>assests/images/van.png" style="height:200px; width:350px;"/><br/>
-
-		<form action="<?php echo base_url('index.php/privateVan/view');?>">
-			<button class="btn private btn-1b"> Private </button>
-		</form>
-      </div>
-
-    </div>
-      <div class="clearfix"> </div>
-    </div>
-  </div>
-  </form>
-<!--vehicle-->
+<!-- credit -->
