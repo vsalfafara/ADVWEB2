@@ -5,6 +5,9 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
 </head>
 <!-- header -->
 <div class="banner-1">
@@ -99,6 +102,15 @@
         </div>
       </div>
       </div>    
+      <style>
+        p {
+          font-family: 'Catamaran', sans-serif;
+          font size="10";
+        }
+        h4{
+          font-family: 'Nunito', sans-serif;
+        }
+      </style>
           <!-- Modals -->
   <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
@@ -127,6 +139,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <h2 style="float:left; font-family: 'Noto Sans', sans-serif;">$99.99 only</h2>
         </div>
       </div>
       
@@ -152,7 +165,7 @@
            <img id="myImg" src="<?php echo base_url(); ?>assests/Gallery/pandin1.jpg" alt="Trolltunga, Norway" width="250" height="200">
                </div>
          <div class="col-lg-3">
-        
+        <br>
          <br>
          <p>Dubbed as the “birthplace of surfing in the Philippines”, Baler is considered as a traveler’s paradise in the province of Aurora. The city is rich in history, has great food, adventurous activities and interesting attractions that you will surely enjoy. </p>
          </div>
@@ -160,6 +173,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <h2 style="float:left; font-family: 'Noto Sans', sans-serif;">$99.99 only</h2>
         </div>
       </div>      
     </div>
@@ -185,7 +199,7 @@
            <img id="myImg" src="<?php echo base_url(); ?>assests/Gallery/pagsanjan1.jpg" alt="Trolltunga, Norway" width="250" height="200">
                </div>
          <div class="col-lg-3">
-         <br>
+         
          <br>
          <br>
          <medium>When you have the sudden idea of “Hundread Islands” or “bangus”, then you might be planning Pangasinan as your next road trip or travel. Pangasinan, being the third largest province in the Philippines, has a lot to offer on your next travel.</medium>
@@ -194,6 +208,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <h2 style="float:left; font-family: 'Noto Sans', sans-serif;">$99.99 only</h2>
         </div>
       </div>      
     </div>
@@ -226,7 +241,8 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> 
+           <h2 style="float:left; font-family: 'Noto Sans', sans-serif;">$99.99 only</h2>
         </div>
       </div>      
     </div>
@@ -241,7 +257,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h2 class="modal-title">Tagaytay</h2>
+          <h4 class="modal-title">Tagaytay</h4>
         </div>
     
         <div class="modal-body">
@@ -260,6 +276,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <h2 style="float:left; font-family: 'Noto Sans', sans-serif;">$99.99 only</h2>
         </div>
       </div>      
     </div>
@@ -274,7 +291,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h2 class="modal-title">LA union</h2>
+          <h4 class="modal-title">LA union</h4>
         </div>
     
         <div class="modal-body">
@@ -293,6 +310,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <h2 style="float:left; font-family: 'Noto Sans', sans-serif;">$99.99 only</h2>
         </div>
       </div>      
     </div>
@@ -307,7 +325,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h2 class="modal-title">Baguio City</h2>
+          <h4 class="modal-title">Baguio City</h4>
         </div>
     
         <div class="modal-body">
@@ -326,6 +344,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <h2 style="float:left; font-family: 'Noto Sans', sans-serif;">$99.99 only</h2>
         </div>
       </div>      
     </div>
@@ -340,7 +359,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h2 class="modal-title">Ilocos</h2>
+          <h4 class="modal-title">Ilocos</h4>
         </div>
     
         <div class="modal-body">
@@ -359,6 +378,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <h2 style="float:left; font-family: 'Noto Sans', sans-serif;">$99.99 only</h2>
         </div>
       </div>      
     </div>
@@ -373,7 +393,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h2 class="modal-title">Kalinga</h2>
+          <h4 class="modal-title">Kalinga</h4>
         </div>
     
         <div class="modal-body">
@@ -392,6 +412,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <h2 style="float:left; font-family: 'Noto Sans', sans-serif;">$99.99 only</h2>
         </div>
       </div>      
     </div>
@@ -406,7 +427,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h2 class="modal-title">SAGADA, MOUNTAIN PROVINCE</h2>
+          <h4 class="modal-title">SAGADA, MOUNTAIN PROVINCE</h4>
         </div>
     
         <div class="modal-body">
@@ -425,6 +446,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <h2 style="float:left; font-family: 'Noto Sans', sans-serif;">$99.99 only</h2>
         </div>
       </div>      
     </div>
