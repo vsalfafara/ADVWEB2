@@ -75,7 +75,10 @@ $this->load->helper('url');
                           ?></td>
                         </tr>
                         <tr>
-                          <td class="pull-left"><strong>Vehicle: </strong><?php echo $invoice->vehicle;?></td>
+                          <td class="pull-left"><strong>Vehicle: </strong><?php echo $invoice->vehicle_name;?></td>
+                        </tr>
+                        <tr>
+                          <td class="pull-left"><strong>Vehicle Type: </strong><?php echo $invoice->vehicle;?></td>
                         </tr>
                         <tr>
                           <td class="pull-left"><strong>Plate Number: </strong><?php echo $invoice->plate_num;?></td>
@@ -119,7 +122,7 @@ $this->load->helper('url');
                       <td><?php echo $invoice->type;?></td>
                       <td><?php echo $invoice->time;?></td>
                       <td><?php echo $invoice->date;?></td>
-                      <td>1</td>
+                      <td><?php echo $invoice->quantity;?></td>
                       <td>P370.00</td>
                     </tr>
                     <tr>

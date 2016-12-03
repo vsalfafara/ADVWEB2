@@ -36,90 +36,88 @@ $this->load->helper('url');
       </div>
       </div>
   </div>
-<div>
+  <div>
     <h3> Reservation </h3>
-      <form action="">
+
+        <?php
+            $this->load->helper('form');
+
+            if (isset($error))
+              echo $error;
+            echo form_open('index.php/receipt/view_privateVan');
+        ?>
 
       <!--Departure-->
        <div class="form-group">
-          <label class="control-label">From: </label>
-           <select name="departing"  maxlength="50" required="required" class="form-control" required>
+        <label class="control-label">From: </label>
+           <select name="vehicle"  maxlength="50" class="form-control" required>
+            <option value="default" disabled selected>Bus</option>
+            <?php foreach($vehicles as $vehicle) { ?>
+
+              <option value="<?php echo $vehicle->vehicleid; ?>">
+                <?php echo $vehicle->vehicle_name . ", " . $vehicle->vehicle_seaters . " Seats, " . $vehicle->plate_num;?>
+              </option>
+
+            <?php } ?>
+          </select>
+        </div>
+       <div class="form-group">
+        <label class="control-label">From: </label>
+           <select name="departing"  maxlength="50" class="form-control" required>
             <option value="default" disabled selected>Departing From</option>
-            <option value="manila">Manila</option>
-            <option value="lucena">Lucena</option>
-            <option value="ilocos">Ilocos</option>
-            <option value="pampanga">Pampanga</option>
-          </select>
-       </div>
+            <?php foreach($departure_data as $dep) { ?>
 
-          <!--Arrival-->
-         <div class="form-group">
-         <label class="control-label">To: </label>
-          <select name="arriving"  maxlength="50" required="required" class="form-control" required>
-            <option value="default" disabled selected>Arriving At</option>
-            <option value="manila">Manila</option>
-            <option value="lucena">Lucena</option>
-            <option value="ilocos">Ilocos</option>
-            <option value="pampanga">Pampanga</option>
-          </select>
-         </div>
+              <option value="<?php echo $dep->dep_name; ?>">
+                <?php echo $dep->dep_name;?>
+              </option>
 
+            <?php } ?>
+          </select>
+        </div>
+        <!--Arrival-->
+        <div class="form-group">
+          <label class="control-label">To: </label>
+            <select name="arriving"  maxlength="50" class="form-control" required>
+            <option value="default" disabled selected>Arrival From</option>
+            <?php foreach($arrival_data as $arr) { ?>
+
+              <option value="<?php echo $arr->arr_name; ?>">
+                <?php echo $arr->arr_name;?>
+              </option>
+
+            <?php } ?>
+            </select>
+        </div>
         <!--Time-->
         <div class="form-group">
          <label class="control-label">Time: </label>
-          <select name="time"  maxlength="50" required="required" class="form-control" required>
+          <select name="time"  maxlength="50" class="form-control" required>
             <option value="default" disabled selected >Time</option>
-            <option value="8AM" >8:00AM</option>
-            <option value="1030AM" >10:30AM</option>
-            <option value="1PM">1:00PM</option>
-            <option value="3PM">3:00PM</option>
-          </select>
-        </div>
+            <?php foreach($departure_data as $dep) { ?>
 
-        <!--Journey Type-->
+              <option value="<?php echo $dep->time; ?>">
+                <?php echo $dep->time;?>
+              </option>
+
+            <?php } ?>
+          </select>
+         </div>
+         <!--Journey-->
         <div class="form-group">
-         <label class="control-label">Ticket: </label>
-          <select name="journey"  maxlength="50" required="required" class="form-control" required>
-            <option value="default" disabled selected >Journey Type: </option>
+         <label class="control-label">Journey Type:  </label>
+          <select name="journey"  maxlength="50" class="form-control" required>
+            <option value="default" disabled selected >Ticket </option>
             <option value="oneway" >One Way</option>
             <option value="roundtrip" >Round Trip</option>
           </select>
         </div>
-
-        <!--Quantity-->
-         <div class="form-group">
-          <label class="control-label">Quantity: </label>
-           <select name="quantity"  maxlength="50" required="required" class="form-control">
-            <option value="default" disabled selected>Quantity</option>
-            <option value="6-9seaters" >6-9 Seaters</option>
-            <option value="10-14seaters" >10-14 Seaters</option>
-            <option value="15-18seaters" >15-18 Seaters</option>
-            <option value="19-22seaters" >19-22 Seaters</option>             
-           </select> 
-
-           <!--Payment-->
+         <!--Payment-->
         <div class="form-group">
-         <label class="control-label">Payment:  </label>
-          <input type="checkbox" name="payment" value="Cash"> Cash </br>
-          <input type="checkbox" name="payment" value="Card"> Card </br>
-        </div>
-        
-        <!--Card-->
-        <div>
-         <fieldset>
-            <legend>Credit Card</legend>
-            Card Number: <input type="tel" class="form-control" name="cardNumber" placeholder="Valid Card Number" autocomplete="cc-number" required autofocus /><br>
-            Expiration:  <input type="tel" class="form-control" name="cardExpiry" placeholder="MM / YY"autocomplete="cc-exp" required/><br>
-            CV Code: <input type="tel" class="form-control" name="cardCVC" placeholder="CVC" autocomplete="cc-csc" required/></br>
-            Coupon Code: <input type="text" class="form-control" name="couponCode" />
-           </fieldset>
-        </div>
-              
-             
-            </form>
-              <form action="<?php echo base_url('index.php/receipt/view');?>">
-              <button class="btn btn-primary nextBtn btn-lg pull-right"> Next </button
-              >
-              </form>
+          <label class="control-label">Payment: </label>
 
+            <input type="submit" class="btn private btn-1b" name="submit" value="Cash"/><br />
+
+            <input type="submit" class="btn private btn-1b" name="submit" value="Credit Card"/>
+        </div>
+             <!--Reservation-->
 </div>
