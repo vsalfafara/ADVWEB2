@@ -11,9 +11,16 @@ class Rentals extends CI_Controller {
             // Whoops, we don't have a page for that!
             show_404();
         }
-        $this->load->view('templates/transac');
-        $this->load->view('travel/'.$page);
-        $this->load->view('templates/footer');
-    }
 
+        if (isset($this->session->userdata['logged_in']))
+        {
+            $this->load->view('templates/transac');
+            $this->load->view('travel/'.$page);
+            $this->load->view('templates/footer');
+        }
+        else
+        {
+            $this->load->view('travel/login_form');
+        }
+    }
 }

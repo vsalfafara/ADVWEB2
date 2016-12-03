@@ -49,5 +49,21 @@ Class Rental_Database extends CI_Model {
             return false;
         }
     }
+
+    public function getDate($date)
+    {
+        $condition = "dep_name = " . "'" . $date . "'";
+        $this->db->select('date');
+        $this->db->from('departure_area');
+        $this->db->where($condition);
+
+        $result = $this->db->get();
+
+        if ($result->num_rows() >= 1)
+            return $result->row();
+        else
+            return false;
+
+    }
 }
 ?>

@@ -60,16 +60,25 @@ $this->load->helper('url');
                           <td class="pull-left"><strong>Invoice #: </strong><?php echo $invoice->invoiceid;?></td>
                         </tr>
                         <tr>
-                          <td class="pull-left"><strong>Date: </strong><?php echo $invoice->date_created;?></td>
+                          <td class="pull-left"><strong>Date: </strong><?php echo str_replace('-', '/',substr($invoice->date_created, 0, 10));?></td>
                         </tr>
                         <tr>
-                          <td class="pull-left"><strong>Period: </strong>9/1/2103 - 9/30/2013</td>
+                          <td class="pull-left"><strong>Validity Period: </strong>
+                          <?php
+                            $date = date('m/d/Y');
+                            echo $date . " - ";
+
+                            $date = date_create($date);
+                            date_add($date,date_interval_create_from_date_string("1 month"));
+                            echo date_format($date,"m/d/Y");
+
+                          ?></td>
                         </tr>
                         <tr>
                           <td class="pull-left"><strong>Vehicle: </strong><?php echo $invoice->vehicle;?></td>
                         </tr>
                         <tr>
-                          <td class="pull-left"><strong>Plate Number: </strong>SDF-448</td>
+                          <td class="pull-left"><strong>Plate Number: </strong><?php echo $invoice->plate_num;?></td>
                         </tr>
                         <tr>
                           <td class="pull-left"><strong>Type: </strong><?php echo $invoice->vehicle_type;?></td>
@@ -105,11 +114,11 @@ $this->load->helper('url');
                     </thead>
                     <tbody>
                     <tr>
-                      <td>Manila</td>
-                      <td>Lucena</td>
-                      <td>One-Way</td>
-                      <td>8:30AM</td>
-                      <td>10/8/2013</td>
+                      <td><?php echo $invoice->departure;?></td>
+                      <td><?php echo $invoice->arrival;?></td>
+                      <td><?php echo $invoice->type;?></td>
+                      <td><?php echo $invoice->time;?></td>
+                      <td><?php echo $invoice->date;?></td>
                       <td>1</td>
                       <td>P370.00</td>
                     </tr>
@@ -144,4 +153,3 @@ $this->load->helper('url');
               "/>
               </form>
 </div>
-            

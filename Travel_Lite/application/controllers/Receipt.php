@@ -3,6 +3,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Receipt extends CI_Controller {
 
+    var $dep = '';
+
     public function __construct()
     {
         parent::__construct();
@@ -35,11 +37,35 @@ class Receipt extends CI_Controller {
 
         if ($this->input->post('submit') == "Cash")
         {
-            $data = array(
+          $numbers = '0123456789';
+          $numbersLength = strlen($numbers);
+          $characters= 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+          $charactersLength = strlen($characters);
+
+          $plateNum = '';
+
+          for ($i = 0; $i < 8; $i++)
+          {
+            if ($i == 3)
+            {
+              $plateNum .= '-';
+            }
+            else if ($i < 3)
+            {
+              $plateNum .= $characters[rand(0,$charactersLength - 1)];
+            }
+            else
+            {
+              $plateNum .= $numbers[rand(0, $numbersLength - 1)];
+            }
+          }
+          
+          $data = array(
                     'departure' => $this->input->post('departing'),
                     'arrival' => $this->input->post('arriving'),
                     'time' => $this->input->post('time'),
                     'vehicle' => "Bus",
+                    'plate_num' => $plateNum,
                     'vehicle_type' => "Private",
                     'type' => $this->input->post('journey'),
                     'payment_type' => $this->input->post('submit'),
@@ -48,8 +74,8 @@ class Receipt extends CI_Controller {
         else
         {
             $data = array(
-                    'departing' => $this->input->post('departing'),
-                    'arriving' => $this->input->post('arriving'),
+                    'departure' => $this->input->post('departing'),
+                    'arrival' => $this->input->post('arriving'),
                     'time' => $this->input->post('time'),
                     'vehicle' => "Bus",
                     'vehicle_type' => "Private",
