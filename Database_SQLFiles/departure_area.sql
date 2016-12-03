@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 17, 2016 at 04:53 PM
+-- Generation Time: Dec 03, 2016 at 07:13 PM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -30,18 +30,19 @@ CREATE TABLE IF NOT EXISTS `departure_area` (
   `depid` int(10) NOT NULL,
   `dep_name` varchar(25) NOT NULL,
   `dep_desc` varchar(25) NOT NULL,
-  `time` varchar(25) NOT NULL
+  `time` varchar(25) NOT NULL,
+  `date` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `departure_area`
 --
 
-INSERT INTO `departure_area` (`depid`, `dep_name`, `dep_desc`, `time`) VALUES
-(1, 'Manila', '', '8:00pm'),
-(2, 'Lucena', '', '11:00pm'),
-(3, 'Ilocos', '', '1:30pm'),
-(4, 'Pampanga', '', '3:30pm');
+INSERT INTO `departure_area` (`depid`, `dep_name`, `dep_desc`, `time`, `date`) VALUES
+(1, 'Manila', '', '8:00pm', '12/13/2016'),
+(2, 'Lucena', '', '11:00pm', '12/20/2016'),
+(3, 'Ilocos', '', '1:30pm', '12/18/2016'),
+(4, 'Pampanga', '', '3:30pm', '12/24/2016');
 
 --
 -- Indexes for dumped tables
