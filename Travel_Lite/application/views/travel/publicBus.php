@@ -50,100 +50,112 @@ $this->load->helper('url');
       </div>
   </div>
 <!--End of Navigation-->
-<div>
-  <h3> Reservation </h3>
+<div class="container">
+ <div class="row">
+   <div class="col-lg-6">
+          <h3><center> Reservation</center> </h3>
+     <hr style="height:1px;border:none;color:#333;background-color:#333;" />
 
-      <?php
-          $this->load->helper('form');
+        <?php
+            $this->load->helper('form');
 
-          if (isset($error))
-            echo $error;
-          echo form_open('index.php/receipt/view_publicBus');
-      ?>
+            if (isset($error))
+              echo $error;
+            echo form_open('index.php/receipt/view_publicBus');
+        ?>
 
-    <!--Departure-->
-     <div class="form-group">
-      <label class="control-label">From: </label>
-         <select name="vehicle"  maxlength="50" class="form-control" required>
-          <option value="default" disabled selected>Bus</option>
-          <?php foreach($vehicles as $vehicle) { ?>
+      <!--Departure-->
+       <div class="form-group">
+        <label class="control-label">Type of Bus: </label>
+           <select name="vehicle"  maxlength="50" class="form-control" required>
+            <option value="default" disabled selected>Bus</option>
+            <?php foreach($vehicles as $vehicle) { ?>
 
-            <option value="<?php echo $vehicle->vehicleid; ?>">
-              <?php echo $vehicle->vehicle_name . ", " . $vehicle->vehicle_seaters . " Seats, " . $vehicle->plate_num;?>
-            </option>
+              <option value="<?php echo $vehicle->vehicleid; ?>">
+                <?php echo $vehicle->vehicle_name . ", " . $vehicle->vehicle_seaters . " Seats, " . $vehicle->plate_num;?>
+              </option>
 
-          <?php } ?>
-        </select>
-      </div>
-     <div class="form-group">
-      <label class="control-label">From: </label>
-         <select name="departing"  maxlength="50" class="form-control" required>
-          <option value="default" disabled selected>Departing From</option>
-          <?php foreach($departure_data as $dep) { ?>
-
-            <option value="<?php echo $dep->dep_name; ?>">
-              <?php echo $dep->dep_name;?>
-            </option>
-
-          <?php } ?>
-        </select>
-      </div>
-      <!--Arrival-->
-      <div class="form-group">
-        <label class="control-label">To: </label>
-          <select name="arriving"  maxlength="50" class="form-control" required>
-          <option value="default" disabled selected>Arrival From</option>
-          <?php foreach($arrival_data as $arr) { ?>
-
-            <option value="<?php echo $arr->arr_name; ?>">
-              <?php echo $arr->arr_name;?>
-            </option>
-
-          <?php } ?>
-          </select>
-      </div>
-      <!--Time-->
-      <div class="form-group">
-       <label class="control-label">Time: </label>
-        <select name="time"  maxlength="50" class="form-control" required>
-          <option value="default" disabled selected >Time</option>
-          <?php foreach($departure_data as $dep) { ?>
-
-            <option value="<?php echo $dep->time; ?>">
-              <?php echo $dep->time;?>
-            </option>
-
-          <?php } ?>
-        </select>
-       </div>
-       <!--Journey-->
-      <div class="form-group">
-       <label class="control-label">Journey Type:  </label>
-        <select name="journey"  maxlength="50" class="form-control" required>
-          <option value="default" disabled selected >Ticket </option>
-          <option value="oneway" >One Way</option>
-          <option value="roundtrip" >Round Trip</option>
-        </select>
-      </div>
-      <!--Quantity-->
-      <div class="form-group">
-         <label class="control-label">Quantity: </label>
-         <select name="quantity"  maxlength="50" required="required" class="form-control">
-            <option value="default" disabled selected>Quantity</option>
-            <?php for( $i = 1; $i < 11; $i++)
-              {
-            ?>
-            <option value="<?php echo $i;?>" ><?php echo $i;?></option>
             <?php } ?>
           </select>
-      </div>
-       <!--Payment-->
-      <div class="form-group">
-        <label class="control-label">Payment: </label>
+        </div>
+       <div class="form-group">
+        <label class="control-label">From: </label>
+           <select name="departing"  maxlength="50" class="form-control" required>
+            <option value="default" disabled selected>Departing From</option>
+            <?php foreach($departure_data as $dep) { ?>
 
-          <input type="submit" class="btn private btn-1b" name="submit" value="Cash"/><br />
+              <option value="<?php echo $dep->dep_name; ?>">
+                <?php echo $dep->dep_name;?>
+              </option>
 
-          <input type="submit" class="btn private btn-1b" name="submit" value="Credit Card"/>
-      </div>
+            <?php } ?>
+          </select>
+        </div>
+        <!--Arrival-->
+        <div class="form-group">
+          <label class="control-label">To: </label>
+            <select name="arriving"  maxlength="50" class="form-control" required>
+            <option value="default" disabled selected>Arrival From</option>
+            <?php foreach($arrival_data as $arr) { ?>
+
+              <option value="<?php echo $arr->arr_name; ?>">
+                <?php echo $arr->arr_name;?>
+              </option>
+
+            <?php } ?>
+            </select>
+        </div>
+        <!--Time-->
+        <div class="form-group">
+         <label class="control-label">Time: </label>
+          <select name="time"  maxlength="50" class="form-control" required>
+            <option value="default" disabled selected >Time</option>
+            <?php foreach($departure_data as $dep) { ?>
+
+              <option value="<?php echo $dep->time; ?>">
+                <?php echo $dep->time;?>
+              </option>
+
+            <?php } ?>
+          </select>
+         </div>
+         <!--Journey-->
+        <div class="form-group">
+         <label class="control-label">Journey Type:  </label>
+          <select name="journey"  maxlength="50" class="form-control" required>
+            <option value="default" disabled selected >Ticket </option>
+            <option value="oneway" >One Way</option>
+            <option value="roundtrip" >Round Trip</option>
+          </select>
+        </div>
+        <!--Quantity-->
+        <div class="form-group">
+           <label class="control-label">Quantity: </label>
+           <select name="quantity"  maxlength="50" required="required" class="form-control">
+              <option value="default" disabled selected>Quantity</option>
+              <?php for( $i = 1; $i < 11; $i++)
+                {
+              ?>
+              <option value="<?php echo $i;?>" ><?php echo $i;?></option>
+              <?php } ?>
+            </select>
+        </div>
+         <!--Payment-->
+     
            <!--Reservation-->
+  </div>     
+    <div class="col-lg-6">
+       <h3><center>Payment:</center> </h3>
+        <hr style="height:1px;border:none;color:#333;background-color:#333;" />
+
+        <div class="col-lg-4">
+            <input type="submit" class="btn private btn-1b" name="submit" value="Cash"/><br /> 
+        </div>
+
+        <div class="col-lg-4">
+               <input type="submit" class="btn private btn-1b" name="submit" value="Credit Card"/>
+               <center></center><img src="<?php echo base_url(); ?>assests/images/card.png" height="0" width="600" class="img-responsive" alt="" /></center>
+        </div>
+    </div>    
+ </div>          
 </div>

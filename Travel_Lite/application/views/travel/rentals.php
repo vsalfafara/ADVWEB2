@@ -53,18 +53,20 @@ $this->load->helper('url');
 <!-- header -->
 
 <!-- vehicle -->
-<form role="form">
+
 <div class="container">
-  <div class="hover11 column">
+ <div class="row">
+  <div class="col-lg-6">
       <!--BUS-->
       <div>
-      <label>BUS</label><br>
+      <center><h4>BUS</h4><center><br>
         <img src="<?php echo base_url(); ?>assests/images/bus.png" style="height:200px; width:400px;"/><br/>
 
 		</div>
 
 		<form action="<?php echo base_url('index.php/privateBus/view');?>">
-			<button class="btn private btn-1b" style="display: none;"> Private </button>
+			<button class="btn btn-default" type="button" style="display: none;"> Private </button>
+
 		</form>
 
 		<form action="<?php echo base_url('index.php/privateBus/view');?>">
@@ -72,22 +74,23 @@ $this->load->helper('url');
 		</form>
 
 		<form action="<?php echo base_url('index.php/publicBus/view');?>">
-			 <input type="submit" class="btn private btn-1b" name="submit" value="PublicBus"/>
+			 <input type="submit" class="btn private btn-1b " name="submit" value="PublicBus"/>
 		</form>
 
       <!--VAN-->
-      <div>
-      <label>VAN</label><br>
+
+
+    </div>
+          <div class="col-lg-6">
+    <center><h4>VAN</h4><center><br>
         <img src="<?php echo base_url(); ?>assests/images/van.png" style="height:200px; width:350px;"/><br/>
 
 		<form action="<?php echo base_url('index.php/privateVan/view');?>">
 			<button class="btn private btn-1b"> Private </button>
 		</form>
       </div>
+ </div>
+    </div>
 
-    </div>
-      <div class="clearfix"> </div>
-    </div>
-  </div>
-  </form>
-<!--vehicle-->
+
+
