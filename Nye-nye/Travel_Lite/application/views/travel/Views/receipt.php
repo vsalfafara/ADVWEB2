@@ -1,10 +1,44 @@
 <?php
 $this->load->helper('url');
 ?>
-  <div class="row setup-content" id="step-4">
-        <div class="col-xs-12">
-            <div class="col-md-12">
-                <h3> Official Receipt</h3>
+<div class="banner-1">
+<div class="container">
+    <div class="header-1">
+        <div class="logo1">
+          <a href="<?php echo base_url('index.php');?>"><img src="<?php echo base_url(); ?>assests/images/lite.png" height="0" width="300" class="img-responsive" alt="" /></a>
+        </div>
+        <div class="head-nav">
+            <span class="menu"> </span>
+              <ul class="cl-effect-16">
+                <li>
+                  <a href="<?php echo base_url('index.php');?>" data-hover="HOME">HOME
+                  </a>
+                </li>
+                <li>
+                  <a href="<?php  echo base_url('index.php/about/view');?>" data-hover="ABOUT">ABOUT</a>
+                </li>
+                <li class="active"><a href="<?php echo base_url('index.php/rentals/view');?>" data-hover="RENTALS">RENTALS</a></li>
+                <li><a href="<?php echo base_url('index.php/destination/view');?>" data-hover="DESTINATIONS">DESTINATIONS</a></li>
+                <li><a href="<?php  echo base_url('index.php/contacts/view');?>" data-hover="CONTACTS">CONTACTS</a></li>
+                  <div class="clearfix"> </div>
+              </ul>
+        </div>
+            <div class="clearfix"> </div>
+          <!-- script-for-nav -->
+          <script>
+            $( "span.menu" ).click(function() {
+              $( ".head-nav ul" ).slideToggle(300, function() {
+              // Animation complete.
+              });
+            });
+          </script>
+        <!-- script-for-nav -->
+      </div>
+      </div>
+  </div>
+  <!--Receipt-->
+  <div>
+  <h3> Receipt</h3>
                 <!-- Start of OR -->
               <div class="container">
                 <div class="row">
@@ -20,27 +54,31 @@ $this->load->helper('url');
                     <table class="invoice-head">
                       <tbody>
                         <tr>
-                          <td class="pull-left"><strong>Customer #: </strong>64243890765122</td>
+                          <td class="pull-left"><strong>Customer #: </strong>21398324797234</td>
                         </tr>
                         <tr>
-                          <td class="pull-left"><strong>Invoice #: </strong>5648</td>
+                          <td class="pull-left"><strong>Invoice #: </strong>2340</td>
                         </tr>
                         <tr>
-                          <td class="pull-left"><strong>Date: </strong>8-18-2013</td>
+                          <td class="pull-left"><strong>Date: </strong>10-08-2013</td>
                         </tr>
                         <tr>
-                          <td class="pull-left"><strong>Period: </strong>7/1/2103 - 7/30/2013
-                          </td>
-                        </tr>
-                          <td class="pull-left"><strong>Vehicle: </strong>Bus
-                          </td>
+                          <td class="pull-left"><strong>Period: </strong>9/1/2103 - 9/30/2013</td>
                         </tr>
                         <tr>
-                          <td class="pull-left"><strong>Type: </strong>Private
-                          </td>
+                          <td class="pull-left"><strong>Vehicle: </strong>Bus</td>
                         </tr>
                         <tr>
-                          <td class="pull-left"><strong>Paid</strong></td>
+                          <td class="pull-left"><strong>Plate Number: </strong>SDF-448</td>
+                        </tr>
+                        <tr>
+                          <td class="pull-left"><strong>Type: </strong>Public</td>
+                        </tr>
+                         <tr>
+                          <td class="pull-left"><strong>Payment: </strong>Card</td>
+                        </tr>
+                        <tr>
+                          <td class="pull-left"><strong>PAID</strong></td>
                         </tr>
                       </tbody>
                     </table>
@@ -58,6 +96,7 @@ $this->load->helper('url');
                       <tr>
                         <th>Departure From</th>
                         <th>Arriving At</th>
+                        <th>Ticket Type</th>
                         <th>Time</th>
                         <th>Date</th>
                         <th>Quantity</th>
@@ -68,12 +107,14 @@ $this->load->helper('url');
                     <tr>
                       <td>Manila</td>
                       <td>Lucena</td>
+                      <td>One-Way</td>
                       <td>8:30AM</td>
                       <td>10/8/2013</td>
-                      <td>---</td>
-                      <td>P3000.00</td>
+                      <td>1</td>
+                      <td>P370.00</td>
                     </tr>
                     <tr>
+                        <td>&nbsp;</td>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
@@ -98,20 +139,9 @@ $this->load->helper('url');
                 </div>
               </div>
               <!--End of OR-->
-                <button class="btn btn-primary nextBtn btn-lg pull-right" type="button">Next
-                </button>
-            </div>
-        </div>
-    </div>
-    <!--End of Step 4-->
-    <!--Step 5-->
-  <div class="row setup-content" id="step-5">
-        <div class="col-xs-12">
-            <div class="col-md-12">
-                <h3> Thank you!</h3>
-                <center><button class="btn btn-success btn-lg pull-right" type="submit">Finish!</button></center>
-            </div>
-        </div>
-    </div>
-    <!--End of Step 5-->
+              <form action="<?php echo base_url('');?>">
+              <input type="submit"class="btn btn-success btn-lg pull-right" value="Finish
+              "/>
+              </form>
 </div>
+            

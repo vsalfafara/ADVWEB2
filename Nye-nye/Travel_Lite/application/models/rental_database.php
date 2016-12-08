@@ -2,6 +2,51 @@
 
 Class Rental_Database extends CI_Model {
 
+	public function getBus() {
+
+				$condition = 'vehicle_type = "bus"';
+				$this->db->select('*');
+				$this->db->from('vehicle');
+				$this->db->where($condition);
+				$query = $this->db->get();
+
+				if ($query->num_rows() > 0) {
+						return $query->result();
+				} else {
+						return false;
+				}
+	}
+
+	public function getVan() {
+
+				$condition = 'vehicle_type = "van"';
+				$this->db->select('*');
+				$this->db->from('vehicle');
+				$this->db->where($condition);
+				$query = $this->db->get();
+
+				if ($query->num_rows() > 0) {
+						return $query->result();
+				} else {
+						return false;
+				}
+	}
+
+	public function getVehicleName($data) {
+
+				$condition = "vehicleid = " . $data;
+				$this->db->select('*');
+				$this->db->from('vehicle');
+				$this->db->where($condition);
+				$query = $this->db->get();
+
+				if ($query->num_rows() > 0) {
+						return $query->row();
+				} else {
+						return false;
+				}
+	}
+
 	public function getDeptOptionsData() {
 
         $this->db->select('*');
@@ -28,5 +73,62 @@ Class Rental_Database extends CI_Model {
         }
 
 	}
+
+    public function receipt($data)
+    {
+        $this->db->insert('invoice', $data);
+
+        if ($this->db->affected_rows() > 0)
+        {
+            $this->db->select('*');
+            $this->db->from('invoice');
+            $this->db->order_by("invoiceid", "desc");
+            $this->db->limit(1);
+
+            $result = $this->db->get();
+
+            return $result->row();
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public function getDate($date)
+    {
+        $condition = "dep_name = " . "'" . $date . "'";
+        $this->db->select('date');
+        $this->db->from('departure_area');
+        $this->db->where($condition);
+
+        $result = $this->db->get();
+
+        if ($result->num_rows() >= 1)
+            return $result->row();
+        else
+            return false;
+
+    }
+
+		public function updateSeaters($quantity,$id)
+		{
+				$condition = "vehicleid = " . $id;
+				$this->db->set('seaters_available', 'seaters_available-intval($quantity)');
+				$this->db->where($condition);
+				$this->db->update('vehicle');
+
+				$this->db->select('*');
+				$this->db->from('vehicle');
+				$this->db->where('vehicleid = ' . $id);
+
+				$result = $this->db->get();
+
+        if ($result->num_rows() >= 1)
+            return $result->row();
+        else
+            return false;
+
+		}
 }
 ?>
