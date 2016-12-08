@@ -51,9 +51,14 @@ $this->load->helper('url');
   <!--Booking-->
   <div class="container">
    <div class="row">
+     <div class="col-lg-12">
+           <h3><center> Reservation for a public bus</center> </h3>  
+     </div>
+   </div>
+   <div class="row">
      <div class="col-lg-6">
       <h3><center> Reservation</center> </h3>
-<hr style="height:1px;border:none;color:#333;background-color:#333;" />
+         <hr style="height:1px;border:none;color:#333;background-color:#333;" />
 
           <?php
               $this->load->helper('form');
@@ -131,37 +136,46 @@ $this->load->helper('url');
           
             
              <!--Reservation-->
-  </div>
-    <div class="col-lg-6">
-      <h3><center>Payment:</center> </h3>
-        <hr style="height:1px;border:none;color:#333;background-color:#333;" />
-    
-       <div class="row">
+   </div>
+      <div class="col-lg-6">
+        <h3><center>Payment Method</center> </h3>
+          <hr style="height:1px;border:none;color:#333;background-color:#333;" />
+      
+         <div class="row">      
+          <div class="col-lg-6">
+               <center>
+               <input type="submit" class="btn private btn-1b" name="submit" value="Credit Card"/></center>      
+          </div>
+          <div class="col-lg-6">
+               <center>
+                 <i class="rest"> </i>
+                    <h4> Payment</h4>
+                    <p>Online Payment (Credit Card)<br>
+                      Cash on Hand</p>
+              </center>      
+          </div>
+          </div>
+              <div class="row">               
 
-        <div class="col-lg-4">
-            <input type="submit" class="btn private btn-1b" name="submit" value="Cash"/><br /> 
-        </div>
+                 <div class="col-lg-6">
+                  <center>
+                    <input type="submit" class="btn private btn-1b" name="submit" value="Cash"/><br /> 
+                    </center>
+                 </div>
+                <!--
+                  <div class="col-lg-4"> 
+                   <center></center><img src="<?php echo base_url(); ?>assests/images/card.png" height="0" width="100" class="img-responsive" alt="" /></center>    
+                 </div>
+                 -->
 
-        <div class="col-lg-4">
-               <input type="submit" class="btn private btn-1b" name="submit" value="Credit Card"/>             
-        </div>
+                  <div class="col-lg-6">
+                    <center></center><img src="<?php echo base_url(); ?>assests/images/lite.png" height="100" width="400" class="img-responsive" alt="" /></center>
+                  </div>
+              </div>
+           
 
-        </div>
-            <div class="row-fluid">
-              <div class="col-lg-3"> 
-               <center></center><img src="<?php echo base_url(); ?>assests/images/card.png" height="0" width="600" class="img-responsive" alt="" /></center>
-               </div>
-
-                <div class="col-lg-3"> 
-               <center></center><img src="<?php echo base_url(); ?>assests/images/card.png" height="0" width="600" class="img-responsive" alt="" /></center>
-               </div>
-            </div>
-    </div>
-        <div class="row-fluid">
-         <div class="col-lg-4">
-            <center></center><img src="<?php echo base_url(); ?>assests/images/lite.png" height="0" width="600" class="img-responsive" alt="" /></center>
-          </div>  
-        </div>  
-    </div>     
+              </div>  
+             
+     </div>
  </div>       
 </div>

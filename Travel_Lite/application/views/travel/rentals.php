@@ -56,41 +56,46 @@ $this->load->helper('url');
 
 <div class="container">
  <div class="row">
-  <div class="col-lg-6">
-      <!--BUS-->
-      <div>
-      <center><h4>BUS</h4><center><br>
-        <img src="<?php echo base_url(); ?>assests/images/bus.png" style="height:200px; width:400px;"/><br/>
+	  <div class="col-lg-4">
+	      <!--BUS-->
+	      <div>
+	      <center><h4>BUS</h4><center><br>
+	      <hr>
+	        <img src="<?php echo base_url(); ?>assests/images/bus.png" style="height:200px; width:400px;"/><br/>
 
-		</div>
+			</div>
 
-		<form action="<?php echo base_url('index.php/privateBus/view');?>">
-			<button class="btn btn-default" type="button" style="display: none;"> Private </button>
+			<form action="<?php echo base_url('index.php/privateBus/view');?>">
+				<button class="btn btn-default" type="button" style="display: none;"> Private </button>
 
-		</form>
+			</form>
 
-		<form action="<?php echo base_url('index.php/privateBus/view');?>">
-			 <input type="submit" class="btn private btn-1b" name="submit" value="PrivateBus"/>
-		</form>
+			<form action="<?php echo base_url('index.php/privateBus/view');?>">
+				 <center><input type="submit" class="btn private btn-1b" name="submit" value="PrivateBus"/></center>
+			</form>
+              
+			<form action="<?php echo base_url('index.php/publicBus/view');?>">
+					 <center> <input type="submit" class="btn private btn-1b " name="submit" value="PublicBus"/></center>
+			</form>  
+	    </div>
 
-		<form action="<?php echo base_url('index.php/publicBus/view');?>">
-			 <input type="submit" class="btn private btn-1b " name="submit" value="PublicBus"/>
-		</form>
+	    <div class="col-lg-4 beech">
+	            <br>
+	            <br>	
+				<center><i class="beec"> </i></center>
+				<center><h4>Bus or Van</h4></center>
+				<center><p> Perhaps you require a shuttle bus or school bus to take people around? Travel Lite also offer bus rentals!</p></center>
+			</div>
+	    <div class="col-lg-4">
+				    <center><h4>VAN</h4><center><br>
+				        <img src="<?php echo base_url(); ?>assests/images/van.png" style="height:200px; width:350px;"/><br/>
 
-      <!--VAN-->
-
-
-    </div>
-          <div class="col-lg-6">
-    <center><h4>VAN</h4><center><br>
-        <img src="<?php echo base_url(); ?>assests/images/van.png" style="height:200px; width:350px;"/><br/>
-
-		<form action="<?php echo base_url('index.php/privateVan/view');?>">
-			<button class="btn private btn-1b"> Private </button>
-		</form>
-      </div>
+						<form action="<?php echo base_url('index.php/privateVan/view');?>">
+							<button class="btn private btn-1b"> Private </button>
+						</form>
+	      </div>     
  </div>
-    </div>
+</div>
 
 
 
