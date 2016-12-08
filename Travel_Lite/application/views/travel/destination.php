@@ -66,7 +66,7 @@
                   <div class="item active">
                     <img class="img-responsive" src="<?php echo base_url(); ?>assests/Gallery/Mayon1.jpg" alt="...">
                      <div class="carousel-caption">
-                         insert a caption for your images here, if you want
+                
                      </div>
                   </div>
                   <div class="item">

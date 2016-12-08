@@ -60,7 +60,6 @@ $this->load->helper('url');
 	      <!--BUS-->
 	      <div>
 	      <center><h4>BUS</h4><center><br>
-	      <hr>
 	        <img src="<?php echo base_url(); ?>assests/images/bus.png" style="height:200px; width:400px;"/><br/>
 
 			</div>

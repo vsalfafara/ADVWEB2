@@ -85,7 +85,7 @@
 						        </div>
 						      </div>
                                <div class="col-md-4">
-						          <img src="<?php echo base_url(); ?>assests/profiles/allen.jpg" class="img-circle" alt="Cinque Terre" width="100" height="100">
+						          <img src="<?php echo base_url(); ?>assests/profiles/raf.jpg" class="img-circle" alt="Cinque Terre" width="100" height="100">
 						           <div class="col-md-8">
 						        <p>Rafael Ochotorena </p>
 						        </div>
