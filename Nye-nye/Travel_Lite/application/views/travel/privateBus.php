@@ -1,8 +1,6 @@
 <?php
 $this->load->helper('url');
 ?>
-<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 <div class="banner-1">
 <div class="container">
     <div class="header-1">
@@ -54,12 +52,12 @@ $this->load->helper('url');
   <div class="container">
    <div class="row">
      <div class="col-lg-12">
-           <h2 style="font-family: 'Lato', sans-serif;"><center> Reservation  a private bus</center> </h2>  
+           <h3><center> Rent a Bus</center> </h3>  
      </div>
    </div>
    <div class="row">
      <div class="col-lg-6">
-      <h3 style="font-family: 'Source Sans Pro', sans-serif;"><center> Reservation</center> </h3>
+      <h3><center> Reservation</center> </h3>
          <hr style="height:1px;border:none;color:#333;background-color:#333;" />
 
           <?php
@@ -72,7 +70,7 @@ $this->load->helper('url');
 
         <!--Departure-->
          <div class="form-group">
-          <label class="control-label">Type of bus: </label>
+          <label class="control-label">Bus: </label>
              <select name="vehicle"  maxlength="50" class="form-control" required>
               <option value="default" disabled selected>Bus</option>
               <?php foreach($vehicles as $vehicle) { ?>
@@ -101,7 +99,7 @@ $this->load->helper('url');
           <div class="form-group">
             <label class="control-label">To: </label>
               <select name="arriving"  maxlength="50" class="form-control" required>
-              <option value="default" disabled selected>Arrival From</option>
+              <option value="default" disabled selected>Arriving To</option>
               <?php foreach($arrival_data as $arr) { ?>
 
                 <option value="<?php echo $arr->arr_name; ?>">
@@ -138,15 +136,17 @@ $this->load->helper('url');
           
             
              <!--Reservation-->
+
+             
    </div>
       <div class="col-lg-6">
-        <h3 style="font-family: 'Source Sans Pro', sans-serif;"><center>Payment Method</center> </h3>
+        <h3><center>Payment Method</center> </h3>
           <hr style="height:1px;border:none;color:#333;background-color:#333;" />
       
          <div class="row">      
           <div class="col-lg-6">
                <center>
-               <input type="submit" class="btn private btn-1b" name="submit" value="Credit Card"/></center>      
+               <input type="submit" class="btn private btn-1b btn-success" name="submit" value="Credit Card"/></center>      
           </div>
           <div class="col-lg-6">
                <center>
@@ -161,7 +161,7 @@ $this->load->helper('url');
 
                  <div class="col-lg-6">
                   <center>
-                    <input type="submit" class="btn private btn-1b" name="submit" value="Cash"/><br /> 
+                    <input type="submit" class="btn private btn-1b btn-success" name="submit" value="Cash"/><br /> 
                     </center>
                  </div>
                 <!--

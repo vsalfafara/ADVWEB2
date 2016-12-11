@@ -32,7 +32,8 @@ class user_authentication extends CI_Controller
         }else{
             $data = array('user_name' => $this->input->post('username'),
                 'user_email' => $this->input->post('email_value'),
-                'user_password' => $this->input->post('password'));
+                'user_password' => $this->input->post('password'),
+                'type' => 1);
 
             $result = $this->login_database->registration_insert($data);
 
@@ -80,7 +81,8 @@ class user_authentication extends CI_Controller
                     $session_data = array(
                         'id' => $result[0]->id,
                         'username' => $result[0]->user_name,
-                        'email' => $result[0]->user_email
+                        'email' => $result[0]->user_email,
+                        'type'=> $result[0]->type
                     );
 
                     $this->session->set_userdata('logged_in', $session_data);

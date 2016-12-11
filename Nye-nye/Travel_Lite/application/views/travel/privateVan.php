@@ -1,8 +1,6 @@
 <?php
 $this->load->helper('url');
 ?>
-<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 <div class="banner-1">
 <div class="container">
     <div class="header-1">
@@ -39,11 +37,6 @@ $this->load->helper('url');
       </div>
   </div>
   <div class="container">
-  <div class="row">
-     <div class="col-lg-12">
-           <h3 style="font-family: 'Lato', sans-serif;"><center> Reservation for a private van</center> </h3>  
-     </div>
-   </div>
    <div class="row">
      <div class="col-lg-6">
         <h3><center> Reservation</center> </h3>
@@ -60,13 +53,13 @@ $this->load->helper('url');
 
         <!--Departure-->
          <div class="form-group">
-          <label class="control-label">From: </label>
+          <label class="control-label">Van </label>
              <select name="vehicle"  maxlength="50" class="form-control" required>
-              <option value="default" disabled selected>Bus</option>
+              <option value="default" disabled selected>Van</option>
               <?php foreach($vehicles as $vehicle) { ?>
 
                 <option value="<?php echo $vehicle->vehicleid; ?>">
-                  <?php echo $vehicle->vehicle_name . ", " . $vehicle->vehicle_seaters . " Seats, " . $vehicle->plate_num;?>
+                  <?php echo $vehicle->vehicle_name;?>
                 </option>
 
               <?php } ?>
@@ -89,7 +82,7 @@ $this->load->helper('url');
           <div class="form-group">
             <label class="control-label">To: </label>
               <select name="arriving"  maxlength="50" class="form-control" required>
-              <option value="default" disabled selected>Arrival From</option>
+              <option value="default" disabled selected>Arriving To</option>
               <?php foreach($arrival_data as $arr) { ?>
 
                 <option value="<?php echo $arr->arr_name; ?>">
@@ -99,6 +92,19 @@ $this->load->helper('url');
               <?php } ?>
               </select>
           </div>
+          <!--Seats-->
+
+         <div class="form-group">
+          <label class="control-label">Seats</label>
+            <select name="seats"  maxlength="50" class="form-control" required>
+            <option value="default" disabled selected>Seats</option>
+            <option value="1">6-9 Seaters</option>
+            <option value="2">10-14 Seaters</option>
+            <option value="3">15-18 Seaters</option>
+            <option value="4">19-22 Seaters</option>
+            </select>
+          </div>
+
           <!--Time-->
           <div class="form-group">
            <label class="control-label">Time: </label>
@@ -113,6 +119,7 @@ $this->load->helper('url');
               <?php } ?>
             </select>
            </div>
+
            <!--Journey-->
           <div class="form-group">
            <label class="control-label">Journey Type:  </label>
@@ -123,22 +130,16 @@ $this->load->helper('url');
             </select>
           </div>
            <!--Payment-->
-          <div class="form-group">
-            <label class="control-label">Payment: </label>
-
-              <input type="submit" class="btn private btn-1b" name="submit" value="Cash"/><br />
-
-              <input type="submit" class="btn private btn-1b" name="submit" value="Credit Card"/>
-          </div>
+         
                <!--Reservation-->
     </div>    
    <div class="col-lg-6">
-      <h3 style="font-family: 'Source Sans Pro', sans-serif;"><center>Payment:</center> </h3>
+      <h3><center>Payment:</center> </h3>
         <hr style="height:1px;border:none;color:#333;background-color:#333;" />
         <div class="row">      
           <div class="col-lg-6">
                <center>
-               <input type="submit" class="btn private btn-1b" name="submit" value="Credit Card"/></center>      
+               <input type="submit" class="btn private btn-1b btn-success" name="submit" value="Credit Card"/></center>      
           </div>
           <div class="col-lg-6">
                <center>
@@ -154,7 +155,7 @@ $this->load->helper('url');
 
                  <div class="col-lg-6">
                   <center>
-                    <input type="submit" class="btn private btn-1b" name="submit" value="Cash"/><br /> 
+                    <input type="submit" class="btn private btn-1b btn-success" name="submit" value="Cash"/><br /> 
                     </center>
                  </div>
                 <!--

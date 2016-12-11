@@ -53,18 +53,6 @@ $this->load->helper('url');
 <!-- header -->
 
 <!-- vehicle -->
-<style>
-.button {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-}
-</style>
 
 <div class="container">
  <div class="row">
@@ -72,22 +60,21 @@ $this->load->helper('url');
 	      <!--BUS-->
 	      <div>
 	      <center><h4>BUS</h4><center><br>
-	        <img src="<?php echo base_url(); ?>assests/images/qwe.png" style="height:200px; width:400px;"/><br/>
+	        <img src="<?php echo base_url(); ?>assests/images/buslol.png" style="height:200px; width:400px;"/><br/>
 
 			</div>
 
 			<form action="<?php echo base_url('index.php/privateBus/view');?>">
 				<button class="btn btn-default" type="button" style="display: none;"> Private </button>
 
-	 	
 			</form>
 
 			<form action="<?php echo base_url('index.php/privateBus/view');?>">
-				 <center><input type="submit" class="btn private btn-1b" name="submit" value="PrivateBus"/></center>
+				 <center><input type="submit" class="btn private btn-1b btn btn-primary" name="submit" value="PrivateBus"/></center>
 			</form>
               
 			<form action="<?php echo base_url('index.php/publicBus/view');?>">
-					 <center> <input type="submit" class="btn private btn-1b " name="submit" value="PublicBus"/></center>
+					 <center> <input type="submit" class="btn private btn-1b btn btn-primary " name="submit" value="PublicBus"/></center>
 			</form>  
 	    </div>
 
@@ -100,11 +87,13 @@ $this->load->helper('url');
 			</div>
 	    <div class="col-lg-4">
 				    <center><h4>VAN</h4><center><br>
-				        <img src="<?php echo base_url(); ?>assests/images/zxc.png" style="height:200px; width:350px;"/><br/>
+				        <img src="<?php echo base_url(); ?>assests/images/vanlol.png" style="height:200px; width:350px;"/><br/>
 
 						<form action="<?php echo base_url('index.php/privateVan/view');?>">
-							<button class="btn private btn-1b"> Private </button>
+							<button class="btn private btn-1b btn btn-primary"> Private </button>
 						</form>
+
+					
 	      </div>     
  </div>
 </div>
