@@ -78,8 +78,9 @@ class user_authentication extends CI_Controller
 
                 if($result != FALSE){
                     $session_data = array(
+                        'id' => $result[0]->id,
                         'username' => $result[0]->user_name,
-                        'email' => $result[0]->user_email,
+                        'email' => $result[0]->user_email
                     );
 
                     $this->session->set_userdata('logged_in', $session_data);

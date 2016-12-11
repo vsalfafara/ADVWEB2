@@ -26,7 +26,7 @@
                                 <li class="active"><a href="<?php $this->load->helper('url'); echo base_url('index.php/destination/view');?>" data-hover="DESTINATIONS">DESTINATIONS</a></li>
                                 <li><a href="<?php $this->load->helper('url'); echo base_url('index.php/contact/view');?>" data-hover="CONTACTS">CONTACTS</a></li>
                                     <div class="clearfix"> </div>
-                                    
+
                                     <?php
         if (isset($this->session->userdata['logged_in']))
                 {
@@ -66,28 +66,28 @@
                   <div class="item active">
                     <img class="img-responsive" src="<?php echo base_url(); ?>assests/Gallery/Mayon1.jpg" alt="...">
                      <div class="carousel-caption">
-                         insert a caption for your images here, if you want
+                
                      </div>
                   </div>
                   <div class="item">
                     <img class="img-responsive" src="<?php echo base_url(); ?>assests/Gallery/Mayon2.jpg" alt="...">
-                    
+
                   </div>
                   <div class="item">
                     <img class="img-responsive" src="<?php echo base_url(); ?>assests/Gallery/Vigan1.jpg" alt="...">
-                    
+
                   </div>
                   <div class="item">
                     <img class="img-responsive" src="<?php echo base_url(); ?>assests/Gallery/anguib4.jpg" alt="...">
-                    
+
                   </div>
                   <div class="item">
                     <img class="img-responsive" src="<?php echo base_url(); ?>assests/Gallery/apo3.jpg" alt="...">
-                    
+
                   </div>
                   <div class="item">
                     <img class="img-responsive" src="<?php echo base_url(); ?>assests/Gallery/bulusan3.jpg" alt="...">
-                   
+
                   </div>
                 </div>
                 <!-- Controls -->
@@ -101,7 +101,7 @@
           </div>
         </div>
       </div>
-      </div>    
+      </div>
       <style>
         p {
           font-family: 'Catamaran', sans-serif;
@@ -114,14 +114,14 @@
           <!-- Modals -->
   <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
-    
+
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">Batangas Road Trip</h4>
         </div>
-    
+
         <div class="modal-body">
      <div class="container col-ld-12">
        <div class="row">
@@ -137,26 +137,35 @@
          </div>
           </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <h2 style="float:left; font-family: 'Noto Sans', sans-serif;">$99.99 only</h2>
+        <div class="modal-footer row">
+         <div class="col-xs-2">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Book/Reserve</button>
+         </div>    
+
+          <div class="col-lg-6">
+            <h3 style=" font-family: 'Noto Sans', sans-serif;">$99.99 only</h3>
+          </div>   
+
+           <div class="col-lg-4">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>      
         </div>
       </div>
-      
+
     </div>
-  </div>  
+  </div>
 </div>
   <!-- Modal2 -->
   <div class="modal fade" id="myModal2" role="dialog">
     <div class="modal-dialog">
-    
+
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">Baler, Aurora</h4>
         </div>
-    
+
         <div class="modal-body">
      <div class="container col-ld-12">
        <div class="row">
@@ -171,11 +180,20 @@
          </div>
           </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <h2 style="float:left; font-family: 'Noto Sans', sans-serif;">$99.99 only</h2>
+            <div class="modal-footer row">
+         <div class="col-xs-2">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Book/Reserve</button>
+         </div>    
+
+          <div class="col-lg-6">
+            <h3 style=" font-family: 'Noto Sans', sans-serif;">$99.99 only</h3>
+          </div>   
+          
+           <div class="col-lg-4">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>      
         </div>
-      </div>      
+      </div>
     </div>
   </div>
 </div>
@@ -183,14 +201,14 @@
 <!-- Modal3 -->
   <div class="modal fade" id="myModal3" role="dialog">
     <div class="modal-dialog">
-    
+
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">Pangasinan</h4>
         </div>
-    
+
         <div class="modal-body">
      <div class="container col-ld-12">
        <div class="row">
@@ -199,18 +217,27 @@
            <img id="myImg" src="<?php echo base_url(); ?>assests/Gallery/pagsanjan1.jpg" alt="Trolltunga, Norway" width="250" height="200">
                </div>
          <div class="col-lg-3">
-         
+
          <br>
          <br>
          <medium>When you have the sudden idea of “Hundread Islands” or “bangus”, then you might be planning Pangasinan as your next road trip or travel. Pangasinan, being the third largest province in the Philippines, has a lot to offer on your next travel.</medium>
          </div>
           </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <h2 style="float:left; font-family: 'Noto Sans', sans-serif;">$99.99 only</h2>
+            <div class="modal-footer row">
+         <div class="col-xs-2">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Book/Reserve</button>
+         </div>    
+
+          <div class="col-lg-6">
+            <h3 style=" font-family: 'Noto Sans', sans-serif;">$99.99 only</h3>
+          </div>   
+          
+           <div class="col-lg-4">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>      
         </div>
-      </div>      
+      </div>
     </div>
   </div>
 </div>
@@ -218,14 +245,14 @@
 <!-- Modal 4 -->
   <div class="modal fade" id="myModal4" role="dialog">
     <div class="modal-dialog">
-    
+
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">San Antonio Zambales</h4>
         </div>
-    
+
         <div class="modal-body">
      <div class="container col-ld-12">
        <div class="row">
@@ -234,17 +261,26 @@
            <img id="myImg" src="<?php echo base_url(); ?>assests/Gallery/pagsanjan1.jpg" alt="Trolltunga, Norway" width="250" height="200">
                </div>
          <div class="col-lg-3">
-         
+
          <br>
          <p>If you want to go beach hopping, camping, or fishing, San Antonio Zambales is the right place for you. Since the cataclysmic eruption of nearby Mt. Pinatubo in 1991, the rocky coastline of San Antonio has undergone a metamorphosis. It is now blanketed with thick volcanic ash that created white beaches, something many tourists are wildly attracted to. Agoho trees, a type of casuarina, have grown inland, fostering an irresistible charm. </p>
          </div>
           </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> 
-           <h2 style="float:left; font-family: 'Noto Sans', sans-serif;">$99.99 only</h2>
+             <div class="modal-footer row">
+         <div class="col-xs-2">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Book/Reserve</button>
+         </div>    
+
+          <div class="col-lg-6">
+            <h3 style=" font-family: 'Noto Sans', sans-serif;">$99.99 only</h3>
+          </div>   
+          
+           <div class="col-lg-4">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>      
         </div>
-      </div>      
+      </div>
     </div>
   </div>
 </div>
@@ -252,14 +288,14 @@
 <!-- Modal5 -->
   <div class="modal fade" id="myModal5" role="dialog">
     <div class="modal-dialog">
-    
+
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">Tagaytay</h4>
         </div>
-    
+
         <div class="modal-body">
      <div class="container col-ld-12">
        <div class="row">
@@ -268,17 +304,26 @@
            <img id="myImg" src="<?php echo base_url(); ?>assests/Gallery/pagsanjan1.jpg" alt="Trolltunga, Norway" width="250" height="200">
                </div>
          <div class="col-lg-3">
-       
+
          <br>
          <p>Being an attraction to both foreign and local tourist thanks to the fun activities and beautiful climate, Tagaytay is one hell of place that you should add to you checklist of “Places I have to visit”. Being known as the home of the Taal Volcano, it’s one of the best reason why Tagaytay is a great destination.</p>
          </div>
           </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <h2 style="float:left; font-family: 'Noto Sans', sans-serif;">$99.99 only</h2>
+            <div class="modal-footer row">
+         <div class="col-xs-2">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Book/Reserve</button>
+         </div>    
+
+          <div class="col-lg-6">
+            <h3 style=" font-family: 'Noto Sans', sans-serif;">$99.99 only</h3>
+          </div>   
+          
+           <div class="col-lg-4">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>      
         </div>
-      </div>      
+      </div>
     </div>
   </div>
 </div>
@@ -286,14 +331,14 @@
 <!-- Modal6 -->
   <div class="modal fade" id="myModal6" role="dialog">
     <div class="modal-dialog">
-    
+
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">LA union</h4>
         </div>
-    
+
         <div class="modal-body">
      <div class="container col-ld-12">
        <div class="row">
@@ -302,17 +347,26 @@
            <img id="myImg" src="<?php echo base_url(); ?>assests/Gallery/pagsanjan1.jpg" alt="Trolltunga, Norway" width="250" height="200">
                </div>
          <div class="col-lg-3">
-     
+
          <br>
          <p>Wanna go to one of the top surfing spots in the Philippines? La Union is the right destination for you! But other than surfing, La Union still has a lot in store for you, from visiting the La Union Culture and Arts Gallery, to trekking the Tangadan Falls, La Union will make sure you’re satisfied with you travel.</p>
          </div>
           </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <h2 style="float:left; font-family: 'Noto Sans', sans-serif;">$99.99 only</h2>
+             <div class="modal-footer row">
+         <div class="col-xs-2">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Book/Reserve</button>
+         </div>    
+
+          <div class="col-lg-6">
+            <h3 style=" font-family: 'Noto Sans', sans-serif;">$99.99 only</h3>
+          </div>   
+          
+           <div class="col-lg-4">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>      
         </div>
-      </div>      
+      </div>
     </div>
   </div>
 </div>
@@ -320,14 +374,14 @@
 <!-- Modal7 -->
   <div class="modal fade" id="myModal7" role="dialog">
     <div class="modal-dialog">
-    
+
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">Baguio City</h4>
         </div>
-    
+
         <div class="modal-body">
      <div class="container col-ld-12">
        <div class="row">
@@ -336,17 +390,26 @@
            <img id="myImg" src="<?php echo base_url(); ?>assests/Gallery/pagsanjan1.jpg" alt="Trolltunga, Norway" width="250" height="200">
                </div>
          <div class="col-lg-3">
-         
+
          <br>
          <p>Famous for its chilling climate, Baguio would be the coolest destination you would go to.  Go see the amazing mountain forest, or taste a delicious raw strawberry, the magic of Baguio’s atmosphere is one the main reasons why Baguio is included in Philippines’ most visited places.</p>
          </div>
           </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <h2 style="float:left; font-family: 'Noto Sans', sans-serif;">$99.99 only</h2>
+             <div class="modal-footer row">
+         <div class="col-xs-2">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Book/Reserve</button>
+         </div>    
+
+          <div class="col-lg-6">
+            <h3 style=" font-family: 'Noto Sans', sans-serif;">$99.99 only</h3>
+          </div>   
+          
+           <div class="col-lg-4">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>      
         </div>
-      </div>      
+      </div>
     </div>
   </div>
 </div>
@@ -354,14 +417,14 @@
 <!-- Modal8 -->
   <div class="modal fade" id="myModal8" role="dialog">
     <div class="modal-dialog">
-    
+
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">Ilocos</h4>
         </div>
-    
+
         <div class="modal-body">
      <div class="container col-ld-12">
        <div class="row">
@@ -370,17 +433,26 @@
            <img id="myImg" src="<?php echo base_url(); ?>assests/Gallery/pagsanjan1.jpg" alt="Trolltunga, Norway" width="250" height="200">
                </div>
          <div class="col-lg-3">
-       
+
          <br>
          <p>Being one of the most historic places in the Philippines, Ilocos is one of the greatest destinations for you. The famous Bangui Windmills, Paoay Church, the momentous streets of Vigan and one of the best beaches in the Philippines – Pagudpud, Ilocos will not let you down on your next travel.</p>
          </div>
           </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <h2 style="float:left; font-family: 'Noto Sans', sans-serif;">$99.99 only</h2>
+             <div class="modal-footer row">
+         <div class="col-xs-2">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Book/Reserve</button>
+         </div>    
+
+          <div class="col-lg-6">
+            <h3 style=" font-family: 'Noto Sans', sans-serif;">$99.99 only</h3>
+          </div>   
+          
+           <div class="col-lg-4">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>      
         </div>
-      </div>      
+      </div>
     </div>
   </div>
 </div>
@@ -388,14 +460,14 @@
 <!-- Modal9 -->
   <div class="modal fade" id="myModal9" role="dialog">
     <div class="modal-dialog">
-    
+
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">Kalinga</h4>
         </div>
-    
+
         <div class="modal-body">
      <div class="container col-ld-12">
        <div class="row">
@@ -404,17 +476,26 @@
            <img id="myImg" src="<?php echo base_url(); ?>assests/Gallery/pagsanjan1.jpg" alt="Trolltunga, Norway" width="250" height="200">
                </div>
          <div class="col-lg-3">
-        
+
          <br>
          <p>Got any plans for sightseeing? The scenery in Kalinga is probably the best anywhere in the Philippines, with gargantuan mountains crushing up against one another and ancient rice terraces that remain cultivated to this day flowing down their sides.</p>
          </div>
           </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <h2 style="float:left; font-family: 'Noto Sans', sans-serif;">$99.99 only</h2>
+             <div class="modal-footer row">
+         <div class="col-xs-2">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Book/Reserve</button>
+         </div>    
+
+          <div class="col-lg-6">
+            <h3 style=" font-family: 'Noto Sans', sans-serif;">$99.99 only</h3>
+          </div>   
+          
+           <div class="col-lg-4">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>      
         </div>
-      </div>      
+      </div>
     </div>
   </div>
 </div>
@@ -422,14 +503,14 @@
 <!-- Modal10 -->
   <div class="modal fade" id="myModal10" role="dialog">
     <div class="modal-dialog">
-    
+
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <h4 class="modal-title">SAGADA, MOUNTAIN PROVINCE</h4>
         </div>
-    
+
         <div class="modal-body">
      <div class="container col-ld-12">
        <div class="row">
@@ -439,37 +520,46 @@
                </div>
          <div class="col-lg-3">
          <br>
-        
+
          <p>Remember the Hanging Coffins in Philippines history? Then I guess you want to travel to Sagada, Mountain Province. Well not just only the Hanging Coffins, but there are still a lot of amazing places to visit in Sagada like the Sumaguing Cave, or the Lumiang Burial Cave, Sagada will help you enjoy your road trip.</p>
          </div>
           </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <h2 style="float:left; font-family: 'Noto Sans', sans-serif;">$99.99 only</h2>
+            <div class="modal-footer row">
+         <div class="col-xs-2">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Book/Reserve</button>
+         </div>    
+
+          <div class="col-lg-6">
+            <h3 style=" font-family: 'Noto Sans', sans-serif;">$99.99 only</h3>
+          </div>   
+          
+           <div class="col-lg-4">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>      
         </div>
-      </div>      
+      </div>
     </div>
   </div>
 </div>
 
 
-      
-      
-      <!--IMPORTANT: This should be a given, but just in case it helps: The number of modals you can fit in a row is limited by your column width. 
-      The above example will only allow 3 modals per row because our column width is set to 4, 4+4+4=12 so... no more than 3, if you wanted 4 modals, 
+
+
+      <!--IMPORTANT: This should be a given, but just in case it helps: The number of modals you can fit in a row is limited by your column width.
+      The above example will only allow 3 modals per row because our column width is set to 4, 4+4+4=12 so... no more than 3, if you wanted 4 modals,
       change the column width to 3, 3+3+3+3=12 (four modals!), Also this should be a given, but the included CSS is not manditory for any functionality, modals are
       javascript based and their funtionality is included in bootstrap, unless you specifically exclude them. The carousel works because of jQuery, which you should
       also already have-->
-      
-      
+
+
     </div> <!--End Row-->
                 </div>
   </div>
 <!-- header -->
-<!-- destination -->    
+<!-- destination -->
 <div class="destination">
- 
+
     <div class="container-fluid">
   <!--
      <div class="desti">
@@ -503,11 +593,11 @@
 
                                         <li class="list-bg1"><span>10.</span><a data-toggle="modal" href="#myModal10"> SAGADA, MOUNTAIN PROVINCE</a></li>
                                     </ul>
-                                  
+
            </div>
-                            
-    <div class="col-md-8  desti-middle">           
-               <h3><center>Gallery</center></h3>    
+
+    <div class="col-md-8  desti-middle">
+               <h3><center>Gallery</center></h3>
                   <div class="row img-thumbnails">
                 <div class="col-md-6">
                     <a data-toggle="modal" data-keyboard="true" data-target=".firstModal" href="#myModal">
@@ -533,13 +623,12 @@
                     <a data-toggle="modal" data-keyboard="true" data-target=".firstModal" href="#myModal">
                         <img src="<?php echo base_url(); ?>assests/Gallery/apo1.jpg" class="img-thumbnail">
                     </a>
-                </div>            
-          </div>                                           
+                </div>
+          </div>
       <div class="clearfix"> </div>
-    </div>  
+    </div>
     <div class="clearfix"> </div>
-   </div> 
+   </div>
    </div>
 </div>
 </div>
-

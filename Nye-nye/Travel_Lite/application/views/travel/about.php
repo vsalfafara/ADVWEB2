@@ -22,19 +22,19 @@
 								<li><a href="<?php $this->load->helper('url'); echo base_url('index.php/rentals/view');?>" data-hover="RENTALS">RENTALS</a></li>
 								<li><a href="<?php $this->load->helper('url'); echo base_url('index.php/destination/view');?>" data-hover="DESTINATIONS">DESTINATIONS</a></li>
 								<li><a href="<?php $this->load->helper('url'); echo base_url('index.php/contact/view');?>" data-hover="CONTACTS">CONTACTS</a></li>
-									<div class="clearfix"> </div>
+                <div class="clearfix"> </div>
 
-				<?php
-				if (isset($this->session->userdata['logged_in']))
-								{
+                <?php
+                  if (isset($this->session->userdata['logged_in']))
+                  {
+                ?>
+                  <li><a href="<?php $this->load->helper('url'); echo base_url('index.php/profile/view');?>" data-hover="PROFILE">PROFILE</center></a></li>
 
-								?>
+                  <li><a href="<?php $this->load->helper('url'); echo base_url('index.php/user_authentication/logout');?>" data-hover="LOGOUT">LOGOUT</center></a></li>
 
-								<li><a href="<?php $this->load->helper('url'); echo base_url('index.php/user_authentication/logout');?>" data-hover="LOGOUT">LOGOUT</center></a></li>
-
-								<?php
-								}
-								?>
+                <?php
+                  }
+                ?>
 							</ul>
 				</div>
 						<div class="clearfix"> </div>
@@ -51,7 +51,7 @@
 			</div>
   </div>
 <!-- header -->
-<!-- about -->	
+<!-- about -->
 		<div class="about">
 		<div class="container">
 		<div class="row-fluid">
@@ -68,57 +68,57 @@
 									<br>
 									<br>
 
-						<div class="row">	
-						    	<div class="col-md-4">
-						          <img src="<?php echo base_url(); ?>assests/profiles/allen.png" class="img-circle" alt="Cinque Terre" width="100" height="100">
-						           <div class="col-md-8">
-						        <p>Allen Baldovino </p>
-						        </div>	
-						       	
-						       
-						    </div>
-						    
-						  <div class="col-md-4">
+						<div class="row">
+						    <div class="col-md-4">
 						          <img src="<?php echo base_url(); ?>assests/profiles/Ken.jpg" class="img-circle" alt="Cinque Terre" width="100" height="100">
 						        <div class="col-md-12">
 						        <p>Ken Ferrer </p>
-						    </div>	
+						        </div>
+
+
+						    </div>
+
+						      <div class="col-md-4">
+						          <img src="<?php echo base_url(); ?>assests/profiles/allen.png" class="img-circle" alt="Cinque Terre" width="100" height="100">
+						           <div class="col-md-8">
+						        <p>Allen Baldovino </p>
+						        </div>
 						      </div>
                                <div class="col-md-4">
-						          <img src="<?php echo base_url(); ?>assests/profiles/rap.jpg" class="img-circle" alt="Cinque Terre" width="100" height="100">
+						          <img src="<?php echo base_url(); ?>assests/profiles/raf.jpg" class="img-circle" alt="Cinque Terre" width="100" height="100">
 						           <div class="col-md-8">
 						        <p>Rafael Ochotorena </p>
-						        </div>	
+						        </div>
 						      </div>
-                              
+
 						</div>
 							<br>
 							<br>
 							<br>
 							<br>
 							<br>
-						<div class="row">	
+						<div class="row">
 						    <center>
 						    <div class="col-md-6 ">
 						          <img src="<?php echo base_url(); ?>assests/profiles/letty.jpg" class="img-circle" alt="Cinque Terre" width="100" height="100">
 						           <div class="col-md-12">
 						        <p>Letty Laureta</p>
-						        </div>	
+						        </div>
 						    </div>
 						      <div class="col-md-6 ">
 						          <img src="<?php echo base_url(); ?>assests/profiles/von.jpg" class="img-circle" alt="Cinque Terre" width="100" height="100">
 						           <div class="col-md-12">
 						        <p>Matthew Alfafara</p>
-						        </div>	
+						        </div>
 						      </div>
 						      </center>
-						</div>	
-					</div>   
+						</div>
+					</div>
 		 </div>
 
-					
+
 								<div class="clearfix"> </div>
-						
+
 			</div>
 </div>
-<!-- about -->	
+<!-- about -->
