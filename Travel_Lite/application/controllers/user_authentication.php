@@ -80,7 +80,8 @@ class user_authentication extends CI_Controller
                     $session_data = array(
                         'id' => $result[0]->id,
                         'username' => $result[0]->user_name,
-                        'email' => $result[0]->user_email
+                        'email' => $result[0]->user_email,
+                        'type'=> $result[0]->type
                     );
 
                     $this->session->set_userdata('logged_in', $session_data);

@@ -53,13 +53,13 @@ $this->load->helper('url');
 
         <!--Departure-->
          <div class="form-group">
-          <label class="control-label">From: </label>
+          <label class="control-label">Van </label>
              <select name="vehicle"  maxlength="50" class="form-control" required>
-              <option value="default" disabled selected>Bus</option>
+              <option value="default" disabled selected>Van</option>
               <?php foreach($vehicles as $vehicle) { ?>
 
                 <option value="<?php echo $vehicle->vehicleid; ?>">
-                  <?php echo $vehicle->vehicle_name . ", " . $vehicle->vehicle_seaters . " Seats, " . $vehicle->plate_num;?>
+                  <?php echo $vehicle->vehicle_name;?>
                 </option>
 
               <?php } ?>
@@ -82,7 +82,7 @@ $this->load->helper('url');
           <div class="form-group">
             <label class="control-label">To: </label>
               <select name="arriving"  maxlength="50" class="form-control" required>
-              <option value="default" disabled selected>Arrival From</option>
+              <option value="default" disabled selected>Arriving To</option>
               <?php foreach($arrival_data as $arr) { ?>
 
                 <option value="<?php echo $arr->arr_name; ?>">
@@ -92,6 +92,19 @@ $this->load->helper('url');
               <?php } ?>
               </select>
           </div>
+          <!--Seats-->
+
+         <div class="form-group">
+          <label class="control-label">Seats</label>
+            <select name="seats"  maxlength="50" class="form-control" required>
+            <option value="default" disabled selected>Seats</option>
+            <option value="1">6-9 Seaters</option>
+            <option value="2">10-14 Seaters</option>
+            <option value="3">15-18 Seaters</option>
+            <option value="4">19-22 Seaters</option>
+            </select>
+          </div>
+
           <!--Time-->
           <div class="form-group">
            <label class="control-label">Time: </label>
@@ -106,6 +119,7 @@ $this->load->helper('url');
               <?php } ?>
             </select>
            </div>
+
            <!--Journey-->
           <div class="form-group">
            <label class="control-label">Journey Type:  </label>

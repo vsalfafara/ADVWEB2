@@ -54,7 +54,7 @@ $this->load->helper('url');
                     <table class="invoice-head">
                       <tbody>
                         <tr>
-                          <td class="pull-left"><strong>Customer Username: </strong><?php echo $this->session->userdata['logged_in']['username'];?></td>
+                          <td class="pull-left"><strong>Customer Username: </strong><?php echo $invoice->created_by;?></td>
                         </tr>
                         <tr>
                           <td class="pull-left"><strong>Invoice #: </strong><?php echo $invoice->invoiceid;?></td>
@@ -123,7 +123,7 @@ $this->load->helper('url');
                       <td><?php echo $invoice->time;?></td>
                       <td><?php echo $invoice->date;?></td>
                       <td><?php echo $invoice->quantity;?></td>
-                      <td>P370.00</td>
+                      <td><?php echo "₱"; echo $invoice->cost;?></td>
                     </tr>
                     <tr>
                         <td>&nbsp;</td>
@@ -132,7 +132,7 @@ $this->load->helper('url');
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
                         <td><strong>Total</strong></td>
-                        <td><strong>P370.00</strong></td>
+                        <td><strong><?php echo "₱"; echo $invoice->cost;?></strong></td>
                     </tr>
                     </tbody>
                   </table>

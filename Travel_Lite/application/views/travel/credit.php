@@ -64,7 +64,7 @@ $this->load->helper('url');
        </fieldset>
 	</div>
 
-              <form action="<?php echo base_url('index.php/receipt/view');?>">
+              <form action="<?php echo base_url('index.php/receipt/creditView');?>">
                 <input type="submit" class="btn btn-primary nextBtn btn-lg pull-right" value="Next"/>
               </form>
 

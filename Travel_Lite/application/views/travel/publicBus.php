@@ -66,7 +66,7 @@ $this->load->helper('url');
 
       <!--Departure-->
        <div class="form-group">
-        <label class="control-label">Type of Bus: </label>
+        <label class="control-label">Bus: </label>
            <select name="vehicle"  maxlength="50" class="form-control" required>
             <option value="default" disabled selected>Bus</option>
             <?php foreach($vehicles as $vehicle) { ?>
@@ -95,7 +95,7 @@ $this->load->helper('url');
         <div class="form-group">
           <label class="control-label">To: </label>
             <select name="arriving"  maxlength="50" class="form-control" required>
-            <option value="default" disabled selected>Arrival From</option>
+            <option value="default" disabled selected>Arriving To</option>
             <?php foreach($arrival_data as $arr) { ?>
 
               <option value="<?php echo $arr->arr_name; ?>">
