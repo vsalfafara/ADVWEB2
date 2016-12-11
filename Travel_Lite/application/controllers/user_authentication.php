@@ -32,7 +32,8 @@ class user_authentication extends CI_Controller
         }else{
             $data = array('user_name' => $this->input->post('username'),
                 'user_email' => $this->input->post('email_value'),
-                'user_password' => $this->input->post('password'));
+                'user_password' => $this->input->post('password'),
+                'type' => 1);
 
             $result = $this->login_database->registration_insert($data);
 
