@@ -37,12 +37,17 @@ $this->load->helper('url');
       </div>
   </div>
   <div class="container">
+  <div class="row">
+     <div class="col-lg-12">
+           <h3><center> Rent a Van</center> </h3>  
+     </div>
+   </div>
    <div class="row">
      <div class="col-lg-6">
         <h3><center> Reservation</center> </h3>
            <hr style="height:1px;border:none;color:#333;background-color:#333;" />
 
-
+  
           <?php
               $this->load->helper('form');
 
@@ -130,7 +135,7 @@ $this->load->helper('url');
             </select>
           </div>
            <!--Payment-->
-         
+            
                <!--Reservation-->
     </div>    
    <div class="col-lg-6">

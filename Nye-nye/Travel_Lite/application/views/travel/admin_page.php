@@ -63,8 +63,8 @@ if (isset($this->session->userdata['logged_in'])) {
                                 ?>
                            </select>
                          </div>
-                             <div class="col-lg-6">
-                                <input type="submit" class="btn private btn-1b" name="submit" value="Get Receipt"/>
+                             <div class="col-lg-4">
+                                <input type="submit" name="submit" value="Get Receipt"/>
                        
         
                               </div>  

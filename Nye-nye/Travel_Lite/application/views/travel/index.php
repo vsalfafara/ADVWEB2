@@ -142,19 +142,19 @@
 							<div class="col-md-4 vero-1">
 								<p>""The Services are so fast and reliable"</p>
 								<label> </label>
-								<h6>-Lebron James</h6>
+								<h6>-Charles Spencer</h6>
 
 							</div>
 							<div class="col-md-4 vero-2">
 								<p>"This Website is a lifesaver!"</p>
 								<label> </label>
-								<h6>-Pablo Escobar</h6>
+								<h6>-Justin Brown</h6>
 
 							</div>
 							<div class="col-md-4 vero-3">
 								<p>"Team Mapya Rocks!"</p>
 								<label> </label>
-								<h6>-Marlou</h6>
+								<h6>-Adam Smith</h6>
 
 		</section>
 		<!-- FlexSlider -->

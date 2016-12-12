@@ -10,6 +10,7 @@ if (isset($this->session->userdata['logged_in'])) {
 <head>
     <title>Registration Form</title>
     <link rel="stylesheet" type="text/css" href="http://localhost/Travel_Lite/assests/css/loginSignup.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|Open+Sans+Condensed:300|Raleway' rel='stylesheet' type='text/css'>
 </head>
 <body>
@@ -40,49 +41,52 @@ overflow: hidden;
 
 </style>
 
-<div id="logo">
-    <a href=""><img src="http://localhost/Travel_Lite/assests/images/lite.png"  height="500" width="550"  /></a>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+           <img src="http://localhost/Travel_Lite/assests/images/lite.png"  alt="" height="400" width="400"  />
+        </div>
 
-</div>
-<div id="main">
-    <div id="login">
-        <h2>Registration Form</h2>
-        <hr/>
-        <?php
-        $this->load->helper('form');
-        echo form_open('index.php/user_authentication/new_user_registration');
-        echo "<div class='error_msg'>";
-        echo validation_errors();
-        echo "</div>";
-        echo form_label('Create Username : ');
-        echo"<br/>";
-        echo form_input('username');
-        echo "<div class='error_msg'>";
-        if (isset($message_display)) {
-            echo $message_display;
-        }
-        echo "</div>";
-        echo"<br/>";
-        echo form_label('Email : ');
-        echo"<br/>";
-        $data = array(
-            'type' => 'email',
-            'name' => 'email_value'
-        );
-        echo form_input($data);
-        echo"<br/>"; 
-        echo"<br/>";
-        echo form_label('Password : ');
-        echo"<br/>";
-        echo form_password('password');
-        echo"<br/>";
-        echo"<br/>";
-        echo form_submit('submit', 'Sign Up');
-        echo form_close();
-        ?>
-        <h5>Already have an account? <a href="http://localhost/Travel_Lite/index.php/user_authentication/user_login_process" style="color:blue;">Login</a></h5>
-    </div>
-</div>
+         <div class="col-lg-4 pull-left">           
+            <h2>Registration Form</h2>
+            <hr/>
+            <?php
+            $this->load->helper('form');
+            echo form_open('index.php/user_authentication/new_user_registration');
+            echo "<div class='error_msg'>";
+            echo validation_errors();
+            echo "</div>";
+            echo form_label('Create Username : ');
+            echo"<br/>";
+            echo form_input('username');
+            echo "<div class='error_msg'>";
+            if (isset($message_display)) {
+                echo $message_display;
+            }
+            echo "</div>";
+            echo"<br/>";
+            echo form_label('Email : ');
+            echo"<br/>";
+            $data = array(
+                'type' => 'email',
+                'name' => 'email_value'
+            );
+            echo form_input($data);
+            echo"<br/>"; 
+            echo"<br/>";
+            echo form_label('Password : ');
+            echo"<br/>";
+            echo form_password('password');
+            echo"<br/>";
+            echo"<br/>";
+            echo form_submit('submit', 'Sign Up');
+            echo form_close();
+            ?>
+            <h4>Already have an account? <a href="http://localhost/Travel_Lite/index.php/user_authentication/user_login_process" style="color:blue;">Login</a></h4>
+        </div>
+   </div>
+</div>            
+
 
 </body>
 </html>
